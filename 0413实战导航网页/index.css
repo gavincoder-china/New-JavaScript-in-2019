@@ -1,0 +1,170 @@
+body {
+  /* https://ws3.sinaimg.cn/large/005BYqpgly1g215akmn9fj31hc0u0e3t.jpg */
+  /* background-image: url(https://wallpaper.infinitynewtab.com/wallpaper/724.jpg); */
+  background-image: url(https://ws3.sinaimg.cn/large/005BYqpgly1g215akmn9fj31hc0u0e3t.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+
+/* .divBody {
+} */
+a{
+text-decoration: none;
+color: #333333;
+font-size: 20px;
+font-weight: bold;
+}
+img {
+  /* border-radius: 50%; */
+  clip-path: circle(40px );
+  box-shadow: 1px 1px 10px #06c;
+  transform: clip-path .4s;
+}
+
+img:hover {
+  clip-path: circle(50px );
+
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px; 
+  box-shadow: 4px 4px 10px #d593e1;
+  /* 时间 */
+  animation-duration: 1s;
+  /* 延迟 */
+  /* -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s; */
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  /* border: 1px red solid; */
+  margin-top: 35px;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+form {
+  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+
+/* form .selectSearch {
+    flex-basis: 10%;
+  padding-left: 20px;
+  height: 114%;
+  width: 100px; */
+/* 去掉小三角 */
+/* appearance: none;
+  -moz-appearance: none;  */
+/* Firefox */
+/* -webkit-appearance: none;  */
+/* Safari 和 Chrome */
+/* outline: none;
+  border-radius: 40px;
+  background-color: blanchedalmond;
+  margin-right: 10px;
+} */
+/* form .selectSearch option{
+    border-radius: 40px;
+} */
+form input {
+  flex-basis: 80%;
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  /* -moz-box-shadow:0 0 10px #06c;
+  -webkit-box-shadow:0 0 10px #06c;
+  box-shadow:0 0 10px #06c; */
+  font-size: 30px;
+  color: cornflowerblue;
+  box-shadow: 4px 4px 10px #06c;
+}
+/* 
+form  .button {
+    flex-basis: 10%;
+  height: 114%;
+  width: 100px;
+  margin: 0;
+  margin-left: 10px;
+ 
+  border-radius: 40px 0 40px 0;
+  background-color: blanchedalmond;
+} */
+
+.content-icon {
+  /* 先设置默认隐藏 */
+  display: none;
+}
+
+.chapter {
+  margin-top: 50px;
+  display: flex;
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+
+.chapter .chapter-item {
+  text-align: center;
+  flex-basis: 20%;
+  border-radius: 50px;
+  background-color: rgba(162, 209, 255, 0.5);
+  margin-left: 5px;
+  box-shadow: 4px 4px 10px #06c;
+  color: white;
+    /* 时间 */
+    animation-duration: 1s;
+    /* 延迟 */
+    /* -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s; */
+}
+
+.chapter .chapter-item:hover {
+  background-color: rgba(255, 192, 203, 0.5);
+}
+
+.content-wrap {
+  display: flex;
+  margin-top: 50px;
+}
+
+.content-wrap .content-item {
+  text-align: center;
+  flex-basis: 20%;
+}
