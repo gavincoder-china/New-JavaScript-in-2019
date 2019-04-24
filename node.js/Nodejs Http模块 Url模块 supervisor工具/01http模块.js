@@ -8,29 +8,37 @@
 
 //1.引入http模块
 
-var http=require('http');
+var http = require('http');
 
 //2.用http模块创建服务
 
-    /*
-     req获取url信息   （request）
-     res 浏览器返回响应信息 （response）
-     * */
+/*
+ req获取url信息   （request）
+ res 浏览器返回响应信息 （response）
+ * */
 
-http.createServer(function(req,res){
+http.createServer(function (req, res) {
+
+    // 首先我们必须调用 res.writeHead 方法来设置 HTTP 响应头，否则就不能返回真
+    // 实内容给客户端。我们设置状态代码为 200（表示 HTTP 状态代码“200 OK”），并
+    // 且传入一段 HTTP 头描述。
+    // 发送 HTTP 头部
+    // HTTP 状态值: 200 : OK
+
+    //设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf-8
+    //res.write('<head><meta charset="utf-8"/></head>') 这也是一种方法，不然会中文乱码
 
 
- // 发送 HTTP 头部
-// HTTP 状态值: 200 : OK
-//设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf-8
-
-    res.writeHead(200,{"Content-Type":"text/html;charset='utf-8'"});
-
+    res.writeHead(200, {
+        "Content-Type": "text/html;charset=UTF-8"
+    });
+    
+    res.write("这个是reponse浏览器返回响应信息\n")
     res.write('你好 nodejs');
 
-    res.write('我是第一个nodejs程序');
+    res.write("我是第一个nodejs程序");
 
     res.end(); /*结束响应*/
 
-
-}).listen(8001);
+    //这边的地址是可以随意写的，可以写127.0.0.1   也可以写成127.0.1.1  
+}).listen(8080, "127.0.0.1");
