@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="62de7497-43a6-42dc-af85-6c5c2bafe72e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/01http模块.js" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/01http模块.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,22 +18,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/01http模块.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="703">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/03.supervisor 监听代码改动重启node使用说明.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/02 url模块.js">
+        <entry file="file://$PROJECT_DIR$/搭建一个简易的twitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="725">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -59,8 +53,8 @@
     <other-services-enabled>false</other-services-enabled>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="561" />
-    <option name="y" value="57" />
+    <option name="x" value="240" />
+    <option name="y" value="17" />
     <option name="width" value="1334" />
     <option name="height" value="794" />
   </component>
@@ -70,35 +64,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="node.js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node.js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node.js" type="462c0819:PsiDirectoryNode" />
-              <item name="Nodejs Http模块 Url模块 supervisor工具" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="D:/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="E:/desktop/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -128,17 +107,22 @@
       <workItem from="1555980274832" duration="396000" />
       <workItem from="1555980687037" duration="1331000" />
       <workItem from="1556003727755" duration="262000" />
+      <workItem from="1556429965505" duration="178000" />
+      <workItem from="1556430158991" duration="84000" />
+      <workItem from="1556430258507" duration="28000" />
+      <workItem from="1556430300833" duration="100000" />
+      <workItem from="1556430416327" duration="24000" />
+      <workItem from="1556431590809" duration="30000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5475000" />
+    <option name="totallyTimeSpent" value="5919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1062" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12693334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.136" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -162,20 +146,27 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/01http模块.js">
+    <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/02 url模块.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="300">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/03.supervisor 监听代码改动重启node使用说明.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/02 url模块.js">
+    <entry file="file://$PROJECT_DIR$/Nodejs Http模块 Url模块 supervisor工具/01http模块.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="703">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/搭建一个简易的twitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
         </state>
       </provider>
     </entry>

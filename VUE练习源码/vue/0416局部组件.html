@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+</body>
+<script>
+
+    // 全局组件
+    //第一个参数是组件的名字，第二个参数是options
+    Vue.component('Btn',{
+
+
+        template:`<button>我是按钮</button>`
+    })
+
+    // 局部组件真言：生子，挂子，用子
+
+    var Vheader = {
+
+        template: `
+                <div class="head">
+                    我是头<Btn />
+                    </div>
+                `
+
+    }
+    var App = {
+        //声明组件   这边包裹template的shi``，而不是单引号
+        template: `
+            <div>我是入口
+                
+                <Vheader></Vheader>
+                </div>
+            `,
+    
+        components: {
+            Vheader
+        }
+
+    };
+
+    new Vue({
+        el: '#app',
+        //使用组件
+        template: `<App></App>`
+        ,
+        //挂载组件
+        components: {
+            App
+        }
+    })
+</script>
+
+
+</html>

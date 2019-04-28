@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: bisque;
+            align-content: center;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 50px;
+            color: black;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            border: 1px red solid;
+        }
+
+        .header {
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 30px;
+
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            border-style: none;
+
+            outline: none;
+            border: 1px pink solid;
+
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .status {
+            display: flex;
+        }
+
+
+
+        .status .two {
+            flex-basis: 16%;
+        }
+
+        .status .one {
+            flex-basis: 50%
+        }
+
+        .task-span {
+            text-align: center;
+            color: grey;
+
+            margin: 0 auto;
+        }
+
+        .task-content {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            height: 30px;
+        }
+
+        .task-content input {
+            flex-basis: 10%;
+            width: 20px;
+            height: 20px;
+        }
+
+        .task-content label {
+            flex-basis: 70%;
+            line-height: 30px;
+        }
+
+        .task-content button {
+            flex-basis: 20%;
+        }
+
+        .edit {
+            width: 60%;
+            margin: 0 auto;
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        TODOLIST
+    </nav>
+
+    <div class="container" id="app">
+        <div class="header">备忘录:</div>
+        <input type="text" placeholder="请在此输入您的备忘任务" @keyup.enter="addtodo" v-model="todo">
+        <ul class="status">
+            <li class="one">
+               <span>{{count}}</span> <span>个未完成的任务</span>
+            </li>
+            <li class="two"><a href="">全部任务</a></li>
+            <li class="two"><a href="">未完成任务</a></li>
+            <li class="two"><a href="">已完成任务</a></li>
+        </ul>
+        <div>
+            <h3>任务列表：</h3>
+            <div class="task-span">未添加任何项目</div>
+            <ul>
+
+                <li>
+                    <div class="task-content" v-for="item in content" >
+                        <input type="checkbox" v-model="item.check">
+                        <label @dblclick="edittodo">{{item.content}}</label>
+                        <button @click="deletetodo">删除</button>
+                    </div>
+                    <input type="text" class="edit">
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="TodoList.js"></script>
+</html>

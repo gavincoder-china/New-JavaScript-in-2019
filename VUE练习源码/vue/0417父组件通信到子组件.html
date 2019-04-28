@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+</body>
+<script>
+
+    // 全局组件
+    //第一个参数是组件的名字，第二个参数是options
+
+    // 1、在父组件中先绑定v-bind:自定义的属性=posts
+    // 2、子要声明属性props:[自定义属性名]来接收
+    // 3、子组件收到数据就是自己的了，任意操作
+
+
+    Vue.component('Btn', {
+
+
+        template: `<button>我是按钮</button>`
+    })
+
+    // 局部组件真言：生子，挂子，用子
+
+    var Vheader = {
+
+        template: `
+    <div class="head">
+    我是头<Btn />
+   <ul>
+    
+    <li v-for='item in postss'>
+        
+        <h4>{{item.id}}</h4>
+        <h4>{{item.title}}</h4>
+        <h4>{{item.content}}</h4>
+        </li>    
+    
+    </ul>
+
+    </div>
+`,
+        props: ['postss']
+
+    }
+    var App = {
+        //声明组件   这边包裹template的shi``，而不是单引号
+        template: `
+        <div>我是入口
+            
+            <Vheader :postss='postss'></Vheader>
+            </div>
+        `,
+        data() {
+
+            return {
+                postss: [
+                    { id: 1, title: "第一个", content: "内容111111" },
+                    { id: 2, title: "第二个", content: "内容222222" },
+                    { id: 3, title: "第三个", content: "内容333333" }
+
+
+
+
+
+                ]
+            }
+        },
+        components: {
+            Vheader
+        }
+
+    };
+
+    new Vue({
+        el: '#app',
+        //使用组件
+        template: `<App></App>`
+        ,
+        data() {
+            return {
+
+            }
+        },
+
+        //挂载组件
+        components: {
+            App
+        }
+
+
+    })
+</script>
+
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+</body>
+<script>
+
+    // 全局组件
+    //第一个参数是组件的名字，第二个参数是options
+
+    // 1、在父组件中先绑定v-bind:自定义的属性=posts
+    // 2、子要声明属性props:[自定义属性名]来接收
+    // 3、子组件收到数据就是自己的了，任意操作
+
+    // 局部组件真言：生子，挂子，用子
+    var Vheader = {
+        template: `
+    <div class="head">
+    <button @click="changeColor"> 点击切换颜色</button>
+    </div>`,
+        methods: {
+            changeColor() {
+                //触发父组件中声明的自定义事件  vue  $emit()
+                //第一个参数是触发的父组件中自定义事件的名字,第二个参数就是传进去的值
+                this.$emit('change');
+            }
+        },
+    }
+    var App = {
+        //声明组件   这边包裹template的shi``，而不是单引号
+        template: `
+        <div :style='{color:colorr}'>       
+            <Vheader  @change='changecolor'></Vheader>
+            <p>文字</p>
+            </div>
+        `,
+        data() {
+            return {            
+                colorr: "red",
+            }
+        },
+        components: {
+            Vheader
+        },
+        methods: {
+            changecolor() {
+                this.colorr = "blue";
+            }
+        },
+
+    };
+    new Vue({
+        el: '#app',
+        //使用组件
+        template: `<App></App>`
+        ,
+        //挂载组件
+        components: {
+            App
+        }
+    })
+</script>
+
+
+</html>

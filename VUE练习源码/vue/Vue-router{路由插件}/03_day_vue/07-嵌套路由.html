@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app"></div>
+	<!-- 1.先引入vue.js -->
+	<script type="text/javascript" src="./vue.min.js"></script>
+	<!-- 2.引包 引入 核心的插件vue-router -->
+	<script type="text/javascript" src="./node_modules/vue-router/dist/vue-router.js"></script>
+	<script type="text/javascript">
+
+		// 地址栏 路由范式
+
+		// （1）xxxxx.html#/user/1    params 动态路由参数
+		// (2) ooooo.html#/user?userId = 1  query
+
+
+		// Vue.use(VueRouter);
+
+
+		//声明组件
+		var Song  = {
+			template:`<div>我是歌曲组件</div>`,
+			created(){
+				console.log(this.$router);
+				console.log(this.$route);
+			}
+		};
+		var Movie  = {
+			template:`<div>电影组件</div>`,
+			created(){
+				console.log(this.$route);
+			}
+		};
+		// 3.创建路由对象
+
+		// /home/song
+		//  /home/movie
+		var Home = {
+			template:`
+			  <div>
+				首页内容
+				<br />
+
+				<router-link to = '/home/song'>歌曲</router-link>
+				<router-link to = '/home/movie'>电影</router-link>
+
+				<router-view></router-view>
+
+			  </div>
+			`
+		};
+
+		var router = new VueRouter({
+			// 4.配置路由对象
+			routes:[
+				// 路由匹配的规则
+				{
+					//动态路由参数 以冒号开头
+					path:'/home',
+					name:'home',
+					component:Home,
+					children:[
+						{
+							path:'song',
+							component:Song
+						},
+						{
+							path:'movie',
+							component:Movie
+						},
+
+					]
+				}
+				
+			]
+		});
+
+		// 抛出两个全局的组件 router-link  router-view
+
+		// 抛出了两个对象  $router  $route (路由信息对象)挂载到了Vue实例化对象
+		
+		
+
+		var App = {
+			template:`
+				<div>
+					<!--router-link默认会被渲染成a标签，to默认会被渲染成href属性-->
+					<router-link :to = "{name:'home'}">首页</router-link>
+					
+					
+					<!--路由组件的出口-->
+					<router-view></router-view>
+				</div>
+			`
+		}
+
+		// Cannot read property 'matched' of undefined
+		// 5.将配置好的路由对象关联到vue实例化对象中
+		new Vue({
+			el:'#app',
+			router:router,
+			template:`<App />`,
+			components:{
+				App
+			}
+		});
+	</script>
+	
+</body>
+</html>

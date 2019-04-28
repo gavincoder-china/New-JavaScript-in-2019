@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-on:keyup.enter="change" />
+    <p>{{ title }}</p>
+    <div :style="{'color':fontcolor}">{{title}}</div>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data () {
+        return {
+          title:"hello world",
+          fontcolor:"red"
+        }
+      },
+      methods: {
+        change: function (e) {
+          this.title = e.target.value;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

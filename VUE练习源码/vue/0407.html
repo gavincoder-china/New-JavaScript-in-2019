@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- $event是个保护参数，意思是向函数传递该事件 -->
+        <button v-on:click="increase(2,$event)">点我递增</button>
+
+        <p> {{counter}} </p>
+
+        <p v-on:mousemove="UpdateCoordinates">
+            Coordinates: {{x}}/{{y}}---
+            <!-- 这边当鼠标移动到这段文字上的时候就停止 -->
+            <span v-on:mousemove="dummy">stop</span>--------------------
+            <!-- 还有一种方法 -->
+
+            <span v-on:mousemove.stop="">stop 这是第二中停止方法(使用时间修饰符stop或者preventDefault();)</span>
+        </p>
+        <button v-on:click="alertButton">点我弹出提示框</button>
+        <div>
+
+            <input type="text" v-on:keydown.enter="keyContent">
+            <p>{{ keycon }}</p>
+
+        </div>
+        <hr>
+        <div>
+            <input type="text" v-model="dataBind" placeholder="数据双向绑定">
+            <p>{{dataBind}}</p>
+
+        </div>
+
+        <button @click="counter++">增加</button>
+        <p>{{counter}}</p>
+        <p>{{out}}</p>
+
+
+    </div>
+
+
+</body>
+
+<script>
+
+    new Vue(
+        {
+            el: '#app',
+            data: {
+
+                counter: 0,
+                x: 0,
+                y: 0,
+                keycon: '',
+                dataBind: ''
+
+            },
+
+            // 计算属性这边的调用就当成属性来，不要加（）
+            // 该属性只能同步，不能进行异步操作
+            computed: {
+                out: function () {
+
+
+                    return this.counter > 10 ? '大于十' : '小于十';
+                }
+            },
+            // 侦听属性
+            watch: {
+                // 这边可以设置异步操作
+                counter: function (value) {
+                    var vm = this;
+
+                    setTimeout(function () {
+
+                        vm.counter = 0;
+
+                    }, 2000)
+
+                }
+            },
+            methods: {
+                increase: function (n, event) {
+
+                    this.counter = n + this.counter;
+                    console.log(event.clientX);
+
+                },
+                UpdateCoordinates: function (event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+
+
+
+                }, dummy: function (e) {
+
+                    e.stopPropagation();
+
+
+                },
+                alertButton: function () {
+
+                    alert("提示！");
+
+                }, keyContent: function (e) {
+
+                    this.keycon = e.target.value;
+
+                }
+            },
+
+
+
+
+
+        }
+
+
+
+
+
+    );
+
+</script>
+
+</html>

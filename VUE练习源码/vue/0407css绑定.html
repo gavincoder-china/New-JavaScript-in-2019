@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        margin-bottom: 20px;
+
+    }
+
+    .red {
+
+        background-color: red;
+    }
+
+    .green {
+
+        background-color: green;
+    }
+
+    .yellow {
+
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <div @click="redAttach=!redAttach" :class="{red :redAttach}"></div>
+        <div @click="greenAttach=!greenAttach" :class="[color,{green :greenAttach}]"></div>
+        <input type="text" v-model="color" placeholder="请在这输入颜色">
+        <div @click="yellowAttach=!yellowAttach" :class="divclass"></div>
+        <div :style="{backgroundColor:bgcolor}"></div>
+        <input type="text" v-model="bgcolor" placeholder="请在这输入颜色">
+
+
+    </div>
+</body>
+
+
+<script>
+
+
+    new Vue({
+
+        el: '#app',
+        data: {
+            redAttach: false,
+            greenAttach: false,
+            yellowAttach: false,
+            color: '',
+            bgcolor: ''
+
+
+        }, computed: {
+            divclass: function () {
+                return {
+                    red: this.yellowAttach,
+                    yellow: !this.yellowAttach
+                }
+
+            }
+        },
+
+
+
+    })
+</script>
+
+</html>

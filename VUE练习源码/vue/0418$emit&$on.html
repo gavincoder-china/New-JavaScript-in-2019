@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <dom-a></dom-a>
+        <dom-b></dom-b>
+        <dom-c></dom-c>
+    </div>
+</body>
+<script>
+    var Event = new Vue();  //创建全局的vue组件
+    var A = {
+        template: `<div>我是a--->这边想要传值<button @click="send">传值</button></div>`
+        , data() {
+            return {
+                a: "我是a"
+            }
+        },
+        methods: {
+            send: function () {
+                console.log("a已传值");
+                Event.$emit("a-msg", this.a);//参数一：事件名；参数二：参数
+            }
+        },
+    };
+    var B = {
+        template: `<div>我是b--->这边想要传值<button @click="send">传值</button></div>`
+        , data() {
+            return {
+                b: "我是b"
+            }
+        },
+        methods: {
+            send: function () {
+                console.log("b已传值");
+                Event.$emit("b-msg", this.b);//参数一：事件名；参数二：参数
+            }
+        },
+    };
+    var C = {
+        template: `<div><h1>我是c组件</h1>
+            <span>接收a的数据：{{a}}</span><br />
+            <span>接收b的数据：{{b}}</span>         
+            </div>`
+        , data() {
+            return {
+                a: '',
+                b: ''
+            }
+        },
+        mounted() {
+            //参数一：事件名  参数二：回调函数
+            Event.$on("a-msg", (a) => {
+                this.a = a
+            });
+            Event.$on("b-msg", (b) => {
+                this.b = b
+            });
+        },
+    };
+    new Vue({
+        el: '#app',
+        components: {
+            "dom-a": A, "dom-b": B, "dom-c": C
+        }
+    })
+</script>
+
+</html>

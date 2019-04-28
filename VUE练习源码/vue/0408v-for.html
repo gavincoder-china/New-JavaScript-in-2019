@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- v-show是隐藏元素 -->
+    <div id="app">
+
+        <ul>
+
+            <li v-for="(value,index) in array" :key="value">{{value}}({{index+1}})</li>
+            <!-- 在这后面加了一个key ---》 :key="value"，这个是为了保证vue在后期跟踪时不单单时依靠index来定位的，这样能够保证数据的可靠性，所以这个值最好加上。 -->
+            <button @click="array.push('add')">点击添加一个元素</button>
+        </ul>
+
+
+        下面是另一种写法
+
+        <template v-for="(i,index) in array">
+            <p>{{i}}</p>
+            <p>{{index}}</p>
+        </template>
+
+        <hr>
+        下面是循环对象数组
+        <ul>
+
+            <li v-for="(person,index) in persons">
+                <!-- <span v-for="key in person">{{key}}:</span> -->
+                <!-- 这边的参数顺序非常重要 -->
+                <span v-for="(value ,key,i) in person">第{{index+1}}位 {{key}}:{{value}} ({{i+1}}) </span>
+            </li>
+
+        </ul>
+
+        <hr>
+        输出1-10
+        <span v-for="n in 10">{{n}}</span>
+    </div>
+
+
+</body>
+
+
+
+<script>
+
+    new Vue({
+
+        el: '#app',
+        data: {
+            array: ["java", "python", "golang", "javascript"],
+            persons: [
+
+                { name: 'gavin', age: 18, sex: "man" },
+
+                { name: 'betty', age: 18, sex: "woman" },
+
+
+            ],
+           
+        }
+
+
+    })
+
+</script>
+
+</html>

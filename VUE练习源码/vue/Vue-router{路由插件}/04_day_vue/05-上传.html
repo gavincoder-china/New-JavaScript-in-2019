@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+    <script type="text/javascript" src="./vue.min.js"></script>
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script type="text/javascript">
+    var App = {
+        data() {
+            return {
+                file: {},
+                rate:0
+            }
+        },
+        template: `
+                <div>   
+                                    上传进度：{{rate}}%
+                                    选择文件：
+                                                
+                                                <input type="file" name = 'file' @change = 'changeHandler'/>
+                                                <button @click='sendAjax'>发送请求</button>
+                </div>
+
+            `,
+        methods: {
+            sendAjax() {
+
+                this.$axios.defaults.baseURL = 'http://127.0.0.1:8888/';
+
+                var fd = new FormData();
+
+                fd.append('file', this.file);
+                this.$axios.post('upload', fd, {
+
+                    onUploadProgress: (progressEvent)=> {
+                        // 对原生进度事件的处理
+                        console.log(progressEvent);
+                       var progress =  (progressEvent.loaded/progressEvent.total)*100;
+                       console.log(progress);
+
+                       this.$nextTick(function() {
+                           this.rate = Math.ceil(progress);
+                       })
+
+
+                    }
+                })
+                .then(res=>{
+                    console.log(res);
+                })
+                .catch(err=>{
+                    console.log(err);
+                })
+
+
+
+
+            },
+            changeHandler(e) {
+                console.log(e.target.files[0]);
+                this.file = e.target.files[0];
+            }
+        }
+
+    };
+
+    Vue.prototype.$axios = axios
+
+    new Vue({
+        el: '#app',
+        template: `<App />`,
+        components: {
+            App
+        }
+    });
+    </script>
+</body>
+
+</html>

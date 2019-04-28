@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+<style>
+    #effect {
+
+
+
+        width: 100px;
+        height: 100px;
+        border: 1px grey solid;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .green {
+        background-color: green;
+    }
+</style>
+
+<body>
+
+    <div id="app">
+
+        <div>
+            <button @click="bt1">effect</button>
+            <div id="effect" :class="t1"></div>
+        </div>
+        <div :style="bar">
+            woooooooooooooooo!
+        </div>
+        <button @click="bt6">点击变长</button>
+    </div>
+
+
+
+
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            attach: true,
+            bar: {
+                width: '60px',
+                backgroundColor: 'red',
+                height: '30px',
+                border: '1px grey solid'
+
+            }
+        }, computed: {
+            t1: function () {
+                return {
+                    red: this.attach,
+                    green: !this.attach
+
+                }
+
+
+            }
+        },
+        methods: {
+            bt1: function () {
+                var vm = this;
+                setInterval(function () {
+
+                    vm.attach = !vm.attach;
+
+                }, 100)
+
+            },
+            bt6: function () {
+                var vm = this;
+                var wid = 0;
+                setInterval(function () {
+                    wid = wid + 10;
+                    vm.bar.width = wid + 'px';
+                    console.log("zaidong")
+                }, 100)
+
+
+            }
+        },
+
+    })
+</script>
+
+</html>

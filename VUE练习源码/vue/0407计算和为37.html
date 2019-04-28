@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>将值加到37</h1>
+        <p>{{value}}</p>
+        <button @click="value=value+5">加五</button>
+        <button @click="value++">加一</button>
+        <button @click="value--">减一</button>
+        <p>{{result}}</p>
+    </div>
+</body>
+
+
+<script>
+    new Vue(
+
+        {
+
+            el: '#app',
+            data: {
+                value: 0,
+
+
+            },
+            computed: {
+                result: function () {
+
+                    return this.value == 37 ? "是" : "不是";
+
+                }
+            },
+
+
+
+        }
+
+
+
+
+    )
+
+
+</script>
+
+</html>

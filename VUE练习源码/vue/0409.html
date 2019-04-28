@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    </div>
+</body>
+<script>
+    var small = {
+        template: `
+            <div>
+            <li v-for="(item,index) in items" :key="item">
+            <p>{{item.id}}</p>
+            <p>{{item.name}}</p>
+            </li>
+            </div>
+            `,
+        props: ["items"]
+    }
+    var large = {
+        template: `<div>
+                <Small :items='books'></Small>
+            </div>`,
+        data() {
+            return {
+                books: [{ id: 1, name: "java" }, { id: 2 , name:"python"}]
+            }
+        },
+        components: {
+            Small:small
+        }
+    }
+    new Vue({
+        el: '#app',
+        template: `<Large></Large>`,
+        components: {
+           Large:large
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- v-show是隐藏元素 -->
+    <div id="app">
+
+        <button @click="show=!show">
+            点击切换
+        </button>
+        <input type="text" v-model="title">
+         <p v-once>{{title}}</p> 
+         <p>{{title}}</p>
+
+        <!-- 给他加上template外套，这样不影响全局样式 -->
+        <!-- 但是我们发现，v-show不支持template -->
+        <template v-show="show">
+            <p>我现在show是{{show}},我是一个template</p>
+
+        </template>
+        <!-- v-show貌似只支持单表签 -->
+        <p v-show="show">我现在show是{{show}},我是一个template</p>
+
+    </div>
+
+
+</body>
+
+
+
+<script>
+
+    new Vue({
+
+        el: '#app',
+        data: {
+            show: true,
+            title:"hello world"
+
+        }
+
+
+    })
+
+</script>
+
+</html>

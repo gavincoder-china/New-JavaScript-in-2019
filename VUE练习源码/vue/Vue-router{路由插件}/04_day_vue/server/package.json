@@ -1,0 +1,26 @@
+{
+  "name": "my_music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "captchapng2": "^1.0.3",
+    "formidable": "^1.2.1",
+    "koa": "^2.5.1",
+    "koa-art-template": "^1.1.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-formidable": "^1.1.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "koa-static": "^4.0.3",
+    "koa2-cors": "^2.0.6",
+    "mysql": "^2.15.0"
+  }
+}

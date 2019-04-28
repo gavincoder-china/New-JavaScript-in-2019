@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- v-if是移除元素 -->
+    <div id="app">
+
+        <button @click="cc">
+            点击切换
+        </button>
+
+//显示与隐藏，，并且不占空间
+        <p v-if="show">①我现在show是{{show}}</p>
+        <p v-else>②我现在show是{{show}}</p>
+        <!-- 给他加上template外套，这样不影响全局样式 -->
+        <!-- <template v-if="show">
+            <p>我现在show是{{show}},我是一个template</p>
+
+        </template> -->
+    </div>
+
+
+</body>
+
+
+
+<script>
+
+    new Vue({
+
+        el: '#app',
+        data: {
+            show: true,
+
+        },
+        methods: {
+           cc:function(){
+              this.show=!this.show ;
+           } 
+        },
+
+
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<!-- 声明式的导航 -->
+		<router-link to = '/home'>首页</router-link>
+		<router-link to = '/blog'>我的博客</router-link>
+		<router-link to = '/login'>登录</router-link>
+		<a href="javascript:void(0);" @click = 'clear'>退出</a>
+		<router-view></router-view>	
+
+	</div>
+	<script type="text/javascript" src="./vue.min.js"></script>
+	<script type="text/javascript" src="./node_modules/vue-router/dist/vue-router.js"></script>
+
+	<script type="text/javascript">
+
+
+
+		Vue.use(VueRouter);
+
+		var Home = {
+			template:`
+
+		   	   <div>
+		   	   	我是首页
+		   	   </div>
+			`
+		};
+		var Blog = {
+			template:`
+
+		   	   <div>
+		   	   	我是博客
+		   	   </div>
+			`
+		};
+		var Login = {
+			data(){
+				return {
+					name:'',
+					pwd:''
+				}
+			},
+			template:`
+
+		   	   <div>
+		   	   	<input type="text" v-model ='name'/>
+		   	   	<input type="text"  v-mode  = 'pwd'/>
+		   	   	<input type="button"  value ='登录' @click = 'login'/>
+		   	   </div>
+			`,
+			methods:{
+				login(){
+					localStorage.setItem('user', {name:this.name,pwd:this.pwd});
+
+
+					// 编程式导航
+					this.$router.push({name:'blog'});
+
+				}
+			}
+		};
+
+		var router = new VueRouter({
+			routes:[
+				{
+					path:'/',
+					redirect:'/home'
+				},
+				{
+					path:'/home',
+					component:Home
+				},
+				{
+					name:'blog',
+					path:'/blog',
+					component:Blog,
+					// 给未来路由 做权限控制 全局路由守卫 来做参照条件
+					meta:{
+						// 表明用户访问该组件是需要登录
+						auth:true
+					}
+				},
+				{
+					path:'/login',
+					component:Login
+				}
+
+			]
+		});
+
+		router.beforeEach((to, from, next) => {
+			console.log(to);
+			console.log(from);
+
+
+			if (to.meta.auth) { //用户点击了博客链接 该用户未登录 需要登录判断 准备跳转登录页面
+
+				if(localStorage.getItem('user')){
+					// alert(1);
+					// 不为空 放行
+					next();
+				}else{
+					// alert(2);
+					// 用户需要登录
+					next({
+						path:'/login'
+					});
+				}
+
+
+			}else{
+				// 直接放行
+				next();//如果不调用next 就会卡住
+			}
+			
+
+		 
+		});
+		
+		new Vue({
+			el:'#app',
+			router,
+			methods:{
+				clear(){
+					localStorage.removeItem('user');
+					this.$router.push('/login');
+				}
+			}
+		});
+	</script>
+</body>
+</html>

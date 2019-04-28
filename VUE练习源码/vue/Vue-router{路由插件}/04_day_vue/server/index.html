@@ -1,0 +1,278 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .cssload-thecube {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+  position: relative;
+  transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+.cssload-thecube .cssload-cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2BA0C7;
+  animation: cssload-fold-thecube 2.4s infinite linear both;
+    -o-animation: cssload-fold-thecube 2.4s infinite linear both;
+    -ms-animation: cssload-fold-thecube 2.4s infinite linear both;
+    -webkit-animation: cssload-fold-thecube 2.4s infinite linear both;
+    -moz-animation: cssload-fold-thecube 2.4s infinite linear both;
+  transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+}
+.cssload-thecube .cssload-c2 {
+  transform: scale(1.1) rotateZ(90deg);
+    -o-transform: scale(1.1) rotateZ(90deg);
+    -ms-transform: scale(1.1) rotateZ(90deg);
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    -moz-transform: scale(1.1) rotateZ(90deg);
+}
+.cssload-thecube .cssload-c3 {
+  transform: scale(1.1) rotateZ(180deg);
+    -o-transform: scale(1.1) rotateZ(180deg);
+    -ms-transform: scale(1.1) rotateZ(180deg);
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    -moz-transform: scale(1.1) rotateZ(180deg);
+}
+.cssload-thecube .cssload-c4 {
+  transform: scale(1.1) rotateZ(270deg);
+    -o-transform: scale(1.1) rotateZ(270deg);
+    -ms-transform: scale(1.1) rotateZ(270deg);
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    -moz-transform: scale(1.1) rotateZ(270deg);
+}
+.cssload-thecube .cssload-c2:before {
+  animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+}
+.cssload-thecube .cssload-c3:before {
+  animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+}
+.cssload-thecube .cssload-c4:before {
+  animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    -ms-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+    -moz-animation-delay: 0.9s;
+}
+
+
+
+@keyframes cssload-fold-thecube {
+  0%, 10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+        75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+        100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -o-transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+        75% {
+    -o-transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+        100% {
+    -o-transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -ms-transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+        75% {
+    -ms-transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+        100% {
+    -ms-transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+        75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+        100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cssload-fold-thecube {
+  0%, 10% {
+    -moz-transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+        75% {
+    -moz-transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+        100% {
+    -moz-transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script type="text/javascript" src="./axios.js"></script>
+    <script type="text/javascript">
+    var App = {
+        template: `
+          <div>
+
+          <div class="cssload-thecube" v-show="isShow">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+          </div>
+
+
+          响应1：  {{ res1 }}
+            <button @click="sendAjax">发请求</button>
+
+          </div>
+
+        `,
+        data: function() {
+            return { res1: '',isShow:false }
+        },
+        methods: {
+          //  实现一个类似cookie的机制
+  //  服务器 -> set-cookie: xxx  保存起来在响应来接器中完成
+  //  在请求之前，从本地获取xxx  设置拦截器，请求头 
+           
+            sendAjax: function() {
+
+             // 配置拦截器   use给请求之前做的事可以是多件，可以use多次
+             this.$axios.interceptors.request.use((config)=>{
+                console.log(config);
+
+                // 设置请求头 ,类似cookie
+                var token = localStorage.getItem('token');
+                if (token) {
+                    config.headers['token'] = token;
+                }
+                this.isShow = true;
+                return config;
+             }); 
+             //响应拦截器
+              this.$axios.interceptors.response.use((res)=> {
+                // console.log(res);  // res.config
+                
+                // 获取服务器的响应头
+                console.log(res);
+                if(res.data.token){
+                  var token = res.data.token;
+                  localStorage.setItem('token',token);
+                }
+
+                this.isShow = false;
+                return res;
+             });   
+               
+              // 1:在请求发起之前， show一个loading出来
+              // 2: 响应回来之后，关闭这个loading
+
+
+             this.$axios.get('http://127.0.0.1:8888/test')
+             .then(res=>{
+              console.log('响应回来了',res);
+             })
+            },
+            
+
+        }
+    }
+
+    // 组件内的每一个this对象，都是Vue的孩子。。
+    // Vue祖宗的原型数据，就会共享给所有的孩子
+    Vue.prototype.$axios = axios;
+
+    new Vue({
+        el: '#app',
+        components: {
+            app: App
+        },
+        template: '<app/>'
+    });
+    </script>
+</body>
+
+</html>

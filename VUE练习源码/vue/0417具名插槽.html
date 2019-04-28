@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+<script>
+    //全局组件
+    Vue.component('mySlot', {
+
+        template: `
+                <li>
+                <slot name="one">one</slot>
+                <slot name="two">two</slot>
+                </li>
+                `,
+
+    });
+    //组件 使用的组件一定要在前面声明
+    var App = {
+        template: `
+                <div>   <ul>   <mySlot>
+                        <h1 slot="one">我是第一个具名插槽</h1>
+                        <h2 slot="two">我是第二个具名插槽</h2>  //如果这不写，则显示原来的内容
+                
+                </mySlot>    </ul> </div>
+                `
+    }
+    new Vue({
+        el: '#app',
+        components: {
+            App
+        },
+        template: `<App></App>`,
+
+    });
+
+
+</script>
+
+</html>

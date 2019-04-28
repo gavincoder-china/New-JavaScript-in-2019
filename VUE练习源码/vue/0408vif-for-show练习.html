@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- v-if是移除元素 -->
+    <div id="app">
+
+        <button @click="show=!show">
+            点击切换
+        </button>
+        <p v-if="show">我是v-if</p>
+        <p v-show="show">我是v-show</p>
+
+        <ul>
+
+            <li v-for="(ff,index) in fruit">
+                第{{index+1}}种水果：
+                <span v-for="(value,key) in ff"> {{key}} {{value}}</span>
+
+            </li>
+            <li v-for="ss in source">
+                <template v-if="Array.isArray(ss)">
+                    <div>
+                        <div v-for="value in ss">{{value}}</div>
+                    </div>
+                </template>
+                <template v-else>
+                    {{ss}}
+                </template>
+
+
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+
+
+
+<script>
+
+    new Vue({
+
+        el: '#app',
+        data: {
+            show: true,
+            fruit: [
+                { name: "apple", price: "5$" },
+                { name: "香蕉", price: "1$" }
+
+            ],
+            source: {
+                name: "test",
+                date: [1.22, 2.33, 3.44, 5.66]
+
+
+            }
+        }
+
+
+    })
+
+</script>
+
+</html>

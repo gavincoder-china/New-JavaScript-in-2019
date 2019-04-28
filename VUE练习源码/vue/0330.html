@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>my name is {{ name }},and i am {{ age }} years old</p>
+      <p>我年龄的三倍是：{{ Cage() }}</p>
+      <p>{{ rand() }}</p>
+      <img v-bind:src="image" alt="" style="height:100px;width:100px;" />
+      <br />
+      <hr />
+      <input type="text" v-bind:value="value" />
+
+      <br />
+
+      <button v-on:click="increase()">点击</button>
+    </div>
+  </body>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        name: "gavincoder",
+        age: 22,
+
+        image:
+          "https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=a4c7a13b34f33a87816d061af65d1018/8d5494eef01f3a295c0bf7c59725bc315d607cfd.jpg",
+        value: "hello v-bind"
+      },
+
+      methods: {
+        Cage: function() {
+          return this.age * 3;
+        },
+
+        rand: function() {
+          return Math.random();
+        },
+        increase: function() {
+          return this.age++;
+        }
+      }
+    });
+  </script>
+</html>
