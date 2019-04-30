@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="获得数据" id="r">
+    <script>
+
+        //要在域名服务器上打开
+        //必须在同一个浏览器带
+        //关闭浏览器后不消失，可以存储5-10MB内容
+        
+        
+        document.getElementById("r").onclick = function () {
+            console.log(localStorage.getItem("name"));
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
