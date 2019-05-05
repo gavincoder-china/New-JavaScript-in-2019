@@ -11,7 +11,7 @@ var obj = {
         var dis;
         var flag = false;
         var body = document.getElementsByTagName('body')[0];
-        //鼠标拖拽事件 
+        7//鼠标拖拽事件 
         moon.onmousedown = function (e) {
             flag = true;
             // 计算出鼠标落下点与边界的距离

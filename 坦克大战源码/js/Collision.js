@@ -29,7 +29,7 @@ function CheckIntersect(object1, object2, overlap) {
 	B2 = object2.x + object2.size - overlap;
 	C2 = object2.y + overlap;
 	D2 = object2.y + object2.size - overlap;
-
+µ
 	//假如他们在x-轴重叠
 	if (A1 >= A2 && A1 <= B2 ||
 		B1 >= A2 && B1 <= B2) {
