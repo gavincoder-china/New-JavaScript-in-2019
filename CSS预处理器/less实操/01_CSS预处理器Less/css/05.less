@@ -1,0 +1,29 @@
+/*这是想暴露出去的注释*/
+//这是见不得人的注释
+@color:deeppink;
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    .inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: @color;
+        height: 100px;
+        width: 100px;
+        //这边的嵌套是平级
+        &:hover{
+            background: pink;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.juzhong(@w:100px,@h:100px,@c:pink){
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: @w;
+    height: @h;
+    background: @c;
+}
+#wrap{
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    height: 600px;
+    border: 1px solid;
+}
+
+
+
+#box1{
+    .juzhong();
+    z-index: 1;
+}
+#box2{
+    .juzhong(@h:200px;@c:deeppink;);
+}

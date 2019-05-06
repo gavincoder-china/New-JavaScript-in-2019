@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.common:hover,
+#box1:hover,
+#box2:hover {
+  background: pink;
+}
+.common,
+#box1,
+#box2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  height: 600px;
+  border: 1px solid;
+}
+#box1 {
+  width: 100px;
+  height: 100px;
+  background: #ffc0cb;
+  z-index: 1;
+}
+#box2 {
+  width: 100px;
+  height: 200px;
+  background: #ff1493;
+}

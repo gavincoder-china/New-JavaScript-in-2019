@@ -1,0 +1,27 @@
+@zero:0;
+@color:yellow;
+*{
+    margin: @zero;
+    padding: @zero;
+}
+#wrap{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    margin: @zero auto;
+    #inner{
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: absolute;
+        left: @zero;
+        right: @zero;
+        top: @zero;
+        bottom: @zero;
+        margin: auto;
+    }
+    .test{
+        width: 200px;
+    }
+}

@@ -1,0 +1,15 @@
+@zero:0;
+@selector:wrap;
+@url:"../img/zdy.jpg";
+*{
+    margin: @zero;
+    padding: @zero;
+}
+#@{selector}{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    margin: @zero auto;
+    background: url("@{url}");
+}

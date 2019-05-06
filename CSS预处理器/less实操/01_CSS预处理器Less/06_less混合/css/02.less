@@ -1,0 +1,28 @@
+.juzhong(@w:10px,@h:10px,@c:pink){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @c;
+    height: @h;
+    width: @w;
+}
+
+
+
+
+#wrap{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    .inner{
+       .juzhong(100px ,100px,pink);
+    }
+    .inner2{
+       .juzhong(@c:black);
+    }
+}

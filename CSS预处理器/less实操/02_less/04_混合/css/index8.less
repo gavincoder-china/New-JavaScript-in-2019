@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.border(@w:10px,@style:solid,@c:deeppink){
+    border: @arguments;
+}
+
+#wrap{
+    width: 200px;
+    height: 200px;
+    background: pink;
+    .border();
+}
+
+

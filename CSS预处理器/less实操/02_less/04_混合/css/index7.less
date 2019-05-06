@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*向上的三角*/
+.triangle(top,@w:10px,@c:pink){
+    border-width:@w;
+    border-color: transparent  transparent  @c transparent ;
+    border-style:dashed dashed solid dashed  ;
+}
+/*向下的三角*/
+.triangle(bottom,@w:10px,@c:pink){
+    border-width:@w;
+    border-color: @c transparent  transparent   transparent ;
+    border-style:solid dashed dashed  dashed  ;
+}
+/*向左的三角*/
+.triangle(left,@w:10px,@c:pink){
+    border-width:@w;
+    border-color:  transparent @c  transparent   transparent ;
+    border-style: dashed solid dashed  dashed  ;
+}
+/*向右的三角*/
+.triangle(right,@w:10px,@c:pink){
+    border-width:@w;
+    border-color:  transparent   transparent   transparent @c;
+    border-style: dashed  dashed  dashed  solid;
+}
+
+.triangle(@_,@w:10px,@c:pink){
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+#sanjiao{
+    .triangle(top,50px,deeppink);
+}
+#sanjiao2{
+    .triangle(bottom);
+}
+#sanjiao3{
+    .triangle(left);
+}
+#sanjiao4{
+    .triangle(right);
+}

@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.juzhong,
+#wrap .inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.juzhong:hover,
+#wrap .inner:hover {
+  background: red!important;
+}
+#wrap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid;
+  margin: 0 auto;
+}
+#wrap .inner:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  background: pink;
+}
+#wrap .inner:nth-child(2) {
+  width: 50px;
+  height: 50px;
+  background: yellow;
+}

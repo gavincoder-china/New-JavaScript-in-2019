@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#list {
+  list-style: none;
+  line-height: 30px;
+  width: 300px;
+  background: pink;
+  margin: 0 auto;
+}
+#list li {
+  height: 30px;
+}
+#list a {
+  float: left;
+}
+#list a:hover {
+  /*&代表父级*/
+  color: red;
+}
+#list span {
+  float: right;
+}
