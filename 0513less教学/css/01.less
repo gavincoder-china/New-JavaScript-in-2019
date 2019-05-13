@@ -1,0 +1,44 @@
+@color: #ffc0cb;
+@f: font-size;
+@num: 50px;
+@widthBig:200px;
+@u: "https://cdn.sinaimg.cn.52ecy.cn/large/005BYqpgly1g2zy5xmqmsj31hc0u0jxn.jpg";
+* {
+  background-repeat: no-repeat;
+  background-size: cover;
+ // background-image: url(@u);
+}
+.kg(@w:100px,@h:100px,@c:yellow){
+    width:@w;
+    height:@h;
+    &:hover{
+        background-color: @c;
+    } 
+}
+.buttonBorder(@w,@c,@style){
+
+ border: @arguments;
+}
+div {
+  width: @widthBig*3;
+  height: 600px;
+  margin: 0 auto;
+  border: 5px @color solid;
+  .first {
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .second {
+    color: @color;
+    @{f}: @num;
+  }
+  .third{
+     .kg();
+    
+  }
+  .forth{
+     .kg(200px,200px,blue);
+     .buttonBorder(15px,black,solid)
+  }
+}

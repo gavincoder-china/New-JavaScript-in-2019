@@ -1,0 +1,40 @@
+//这边是方法,加了个参数.这边内容跟继承没啥关系,不懂的话去学下less混合规范,总之我称之为方法
+.bor(@w,@c,@style) {
+  border: @arguments;
+}
+//这个是第一个按钮的样式,因为less的编译时自上而下的,所以这个父类放在前面.
+.first {
+  width: 100px;
+  height: 100px;
+  .bor(2px, blue, solid);
+  //这边注意下,我写了个伪类
+  &:hover {
+    background-color: red;
+  }
+}
+//这边是方法,方法内继承了first的样式
+.test() {
+  //这边注意下
+  &:extend(.first);
+}
+
+.test2() {
+  //这边注意下,里面加了个all,意思是不但继承first的属性,还继承其伪类
+  &:extend(.first all);
+}
+
+div {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    .bor(5px, pink, solid);
+     //第二个按钮
+        .second {
+          .test();
+        }
+
+    //第三个按钮
+        .third {
+          .test2();
+        }
+}

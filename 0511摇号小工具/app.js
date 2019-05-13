@@ -26,10 +26,9 @@ var vm = new Vue({
             this.show=false;
         },
         chooseNum: function () {
-            clearInterval(this.timer)
+            clearInterval(this.timer)  //清除计时器
             this.timer=setInterval(()=>{ this.numResult = Math.floor(Math.random() * (this.num) + 1)},100)
           
-           
            // this.numResult = Math.floor(Math.random() * (this.num) + 1)
             console.log(this.numResult);
             this.start=false;

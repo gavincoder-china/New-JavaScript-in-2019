@@ -3,12 +3,20 @@
 
 
 @var: 0;
+
 .class {
 @var: 1;
+one: @var;  //1
+
     .brass {
       @var: 2;
-      three: @var;  //3
       @var: 3;
+      four:@var;
+     
+      three: @var;  //3
+     
+
+      //先声明变量,后执行赋值  变量提升
     }
-  one: @var;  //1
+  
 }

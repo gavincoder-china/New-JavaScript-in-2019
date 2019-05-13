@@ -154,14 +154,15 @@
 <body>
     <div id="app">
         <div class="content">
-            <div class="buttonChoose">
+            <div class="buttonChoose" >
                 <div><button @click="useNum" class="shake">抽数字</button></div>
                 <div><button @click="useName" class="shake">抽姓名</button></div>
 
             </div>
             <div v-if="show">
                 <input type="number" id="numInput" placeholder="请输入总人数" v-model="num" class="input">
-                <br><button @click="chooseNum" class="chooseButton" v-show="start" >摇号</button>
+                <br>
+                <button @click="chooseNum" class="chooseButton" v-show="start" >摇号</button>
                 <button @click="chooseNumStop" class="chooseButton" v-show="stop" >停止</button>
                 
                 <p class="resultNum">结果为:   {{numResult}}</p>
@@ -184,6 +185,8 @@
         </div>
     </div>
 </body>
-<script src="app.js"></script>
+<script src="app.js">
+
+</script>
 
 </html>
