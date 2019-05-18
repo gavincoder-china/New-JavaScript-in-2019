@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_Object扩展</title>
+</head>
+<body>
+<!--
+ES5给Object扩展了好一些静态方法, 常用的2个:
+1. Object.create(prototype, [descriptors])
+  * 作用: 以指定对象为原型创建新的对象
+  * 为新的对象指定新的属性, 并对属性进行描述
+    value : 指定值
+    writable : 标识当前属性值是否是可修改的, 默认为false
+    configurable: 标识当前属性是否可以被删除 默认为false
+    enumerable： 标识当前属性是否能用for in 枚举 默认为false
+
+2. Object.defineProperties(object, descriptors)
+  * 作用: 为指定对象定义扩展多个属性
+  * get ：用来获取当前属性值得回调函数
+  * set ：修改当前属性值得触发的回调函数，并且实参即为修改后的值
+  * 存取器属性：setter,getter一个用来存值，一个用来取值
+-->
+<script type="text/javascript">
+    var obj = {name : 'curry', age : 29}
+    var obj1 = {};
+    obj1 = Object.create(obj, {
+        sex : {
+            value : '男',
+            writable : true
+        }
+    });
+    obj1.sex = '女';
+    console.log(obj1.sex);
+
+    //Object.defineProperties(object, descriptors)
+    var obj2 = {
+        firstName : 'curry',
+        lastName : 'stephen'
+    };
+    Object.defineProperties(obj2, {
+        fullName : {
+            get : function () {
+                return this.firstName + '-' + this.lastName
+            },
+            set : function (data) {
+                var names = data.split('-');
+                this.firstName = names[0];
+                this.lastName = names[1];
+            }
+        }
+    });
+    console.log(obj2.fullName);
+    obj2.firstName = 'tim';
+    obj2.lastName = 'duncan';
+    console.log(obj2.fullName);
+    obj2.fullName = 'kobe-bryant';
+    console.log(obj2.fullName);
+</script>
+</body>
+</html>

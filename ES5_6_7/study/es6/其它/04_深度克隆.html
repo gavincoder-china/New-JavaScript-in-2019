@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>对象的深度克隆</title>
+</head>
+<body>
+
+
+<!--
+  1、数据类型：
+    * 数据分为基本的数据类型(String, Number, boolean, Null, Undefined)和对象数据类型
+    - 基本数据类型：
+      特点： 存储的是该对象的实际数据
+    - 对象数据类型：
+      特点： 存储的是该对象在栈中引用，真实的数据存放在堆内存里
+  2、复制数据
+    - 基本数据类型存放的就是实际的数据，可直接复制
+      let number2 = 2;
+      let number1 = number2;
+    - 克隆数据：对象/数组
+      1、区别： 浅拷贝/深度拷贝
+         判断： 拷贝是否产生了新的数据还是拷贝的是数据的引用
+         知识点：对象数据存放的是对象在栈内存的引用，直接复制的是对象的引用
+         let obj = {username: 'kobe'}
+         let obj1 = obj; // obj1 复制了obj在栈内存的引用
+      2、常用的拷贝技术
+        1). arr.concat(): 数组浅拷贝
+        2). arr.slice(): 数组浅拷贝
+        3). JSON.parse(JSON.stringify(arr/obj)): 数组或对象深拷贝, 但不能处理函数数据
+        4). 浅拷贝包含函数数据的对象/数组
+        5). 深拷贝包含函数数据的对象/数组
+-->
+<script type="text/javascript">
+
+</script> 
+</body>
+</html>
