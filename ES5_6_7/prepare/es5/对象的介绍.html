@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // car 字面量方式
+    var car = {
+        brand: "bmw",
+        price: "100w",
+        master: "gavin",
+        color: "red",
+        size: "big"
+    }
+    //对象属性添加      
+    car.time = "10years";
+    //console.log(car);
+
+    // stu  工厂模式
+    function CreateStu(name, age, gender) {
+
+        var stu = new Object();
+        stu.name = name;
+        stu.age = age;
+        stu.gender = gender;
+        return stu;
+    }
+    var s1 = CreateStu("gavin", 18, "man");
+    s1.father = "baba"; //可以再添加属性
+    var s2 = CreateStu("ll", 19, "man");
+
+    console.log(s1);
+    console.log(s2);
+
+    // house 构造函数
+    function House(price, size) {
+        this.price = price;
+        this.size = size;
+    }
+
+    var h1 = new House("100w", "100ping");
+    var h2 = new House("1000w", "1000ping");
+
+    console.log(h1);
+    h1.father = "baba";  //可以再添加属性
+    console.log(h1);
+    console.log(h2);
+
+
+
+    //es6的class方式 
+    class Cat {
+        //属性
+        constructor(name, color) {
+            this.name = name;
+            this.color = color;
+        };
+
+        //对象还会动,还有方法
+        run() {
+            console.log("我会跑");
+        };
+        eat() {
+            console.log("我会吃老鼠");
+        }
+    }
+
+    var cat = new Cat("kitty", "white");
+    console.log(cat.name);
+    cat.run();
+    cat.eat();
+
+</script>
+
+</html>

@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>02_JSON对象</title>
 </head>
+
 <body>
-<!--
+  <!--
 1. JSON.stringify(obj/arr)
   * js对象(数组)转换为json对象(数组)
 2. JSON.parse(json)
   * json对象(数组)转换为js对象(数组)
 
 -->
-<script type="text/javascript">
+  <script type="text/javascript">
+    var gavin = {
+      "name": "gavincoder",
+      "age": "18"
+    }
+    
+    var gg = JSON.stringify(gavin);
+    console.log(gg);
 
-</script>
+    gg = JSON.parse(gg);
+    console.log(gg);
+  </script>
 </body>
+
 </html>

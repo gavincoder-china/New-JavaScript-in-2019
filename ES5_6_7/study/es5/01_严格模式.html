@@ -1,11 +1,13 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>01_严格模式</title>
+	<meta charset="UTF-8">
+	<title>01_严格模式</title>
 </head>
+
 <body>
-<!--
+	<!--
 1. 理解:
   * 除了正常运行模式(混杂模式)，ES5添加了第二种运行模式："严格模式"（strict mode）。
   * 顾名思义，这种模式使得Javascript在更严格的语法条件下运行
@@ -23,9 +25,23 @@
 	* 对象不能有重名的属性
 -->
 
-<script type="text/javascript">
+	<script type="text/javascript">
+		'use strict';
+		var str = "gavin";
+		console.log(str);
 
-</script>
+		//对象
+		var stu = {
+			name: "gavin",
+			age: 18,
+			gender: "man"
+		}
+
+		console.log(stu);
+
+	
+	</script>
 
 </body>
+
 </html>

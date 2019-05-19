@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+//this 指向,但是它到底指向谁
+
+var p1={name:"周瑜"};
+p1.phone=function(x,y){
+
+    console.log(`${this.name}:赢了${x}:${y}`)
+}
+p1.phone(1,2);
+
+var p2={name:"曹操"};
+
+//call  依次传参
+p1.phone.call(p2,3,4);
+
+//apply  参数是数组形式
+p1.phone.apply(p2,[5,6]);
+
+//bind  异步,回调函数 , 返回的是一个函数
+
+var phone2= p1.phone.bind(p2,7,8);
+phone2();
+
+p1.show=function(){
+  setTimeout(function(){
+      console.log(`${this.name}:秀的一批`);
+
+  }.bind(this),1000)
+
+  //  setInterval setTimeout  它们的this指向的是window
+
+  
+};
+p1.show();
+
+
+
+
+
+</script>
+</html>

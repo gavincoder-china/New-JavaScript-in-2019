@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // var 跟   不加var   的变量作用域区别
+    var i = 1;
+    j = 2;
+    console.log(i, j);
+    var sum = function () {
+        var a = 3;  //在函数作用域内,加上var的变量是局部的,不会被外部获取
+        b = 4;  //在函数作用域内,不加 var的变量依旧是全局的
+        return a + b;
+
+    }
+    sum();
+    // console.log(a);
+    console.log(b);//会被获取
+
+    ///////变量提升
+    var test = function () {
+       
+        console.log(a);
+        var a = 10;
+        
+        console.log(a);
+
+        //真实顺序
+    //  var a;
+    //  console.log(a);
+    //  a=10;
+    //  console.log(a);
+
+         var b;
+         console.log(b);
+       //真实顺序
+         var a;
+         var b;
+         console.log(a);
+         a=10;
+         console.log(a);
+         console.log(b);
+
+    }
+    test();
+
+
+</script>
+
+</html>

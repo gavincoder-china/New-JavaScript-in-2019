@@ -27,12 +27,16 @@ ES5给Object扩展了好一些静态方法, 常用的2个:
     obj1 = Object.create(obj, {
         sex : {
             value : '男',
-            writable : true
+            writable : true,
+            enumerable:true
         }
     });
     obj1.sex = '女';
     console.log(obj1.sex);
-
+    //循环obj1内的属性
+    for (const key in obj1) {
+       console.log(key)
+    }
     //Object.defineProperties(object, descriptors)
     var obj2 = {
         firstName : 'curry',
@@ -55,6 +59,8 @@ ES5给Object扩展了好一些静态方法, 常用的2个:
     obj2.lastName = 'duncan';
     console.log(obj2.fullName);
     obj2.fullName = 'kobe-bryant';
+    console.log(obj2);
+    
     console.log(obj2.fullName);
 </script>
 </body>

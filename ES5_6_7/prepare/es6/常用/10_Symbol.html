@@ -39,9 +39,12 @@
       
       // 用作对象的属性(唯一)
       let obj = {username: 'kobe', age: 39};
-      obj[symbol] = 'hello';
+     // obj[symbol] = 'hello';
       obj[symbol] = 'symbol';
       console.log(obj);
+      
+      console.log(obj[symbol]);
+
       for(let i in obj){
         console.log(i);
       }

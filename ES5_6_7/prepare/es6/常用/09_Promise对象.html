@@ -43,7 +43,7 @@
 -->
 
 <script type="text/javascript">
-
+/*
     //创建一个promise实例对象
     let promise = new Promise((resolve, reject) => {
         //初始化promise的状态为pending---->初始化状态
@@ -62,18 +62,22 @@
     });
     console.log('2222');
 
-
+*/
     //定义一个请求news的方法
     function getNews(url) {
         //创建一个promise对象
         let promise = new Promise((resolve, reject) => {
             //初始化promise状态为pending
             //启动异步任务
+            //创建实例对象
             let request = new XMLHttpRequest();
+            //绑定监听
             request.onreadystatechange = function () {
                 if(request.readyState === 4){
                     if(request.status === 200){
+                      //拿到数据
                         let news = request.response;
+                        //修改promise状态
                         resolve(news);
                     }else{
                         reject('请求失败了。。。');
@@ -91,12 +95,17 @@
             .then((news) => {
                 console.log(news);
                 document.write(JSON.stringify(news));
-                console.log('http://localhost:3000' + news.commentsUrl);
-                return getNews('http://localhost:3000' + news.commentsUrl);
+                let url='http://localhost:3000' + news.commentsUrl;
+                
+                console.log("请求评论");
+                console.log(getNews(url));
+                return getNews(url); //这边return的是一个promise
             }, (error) => {
                 alert(error);
             })
             .then((comments) => {
+              //这边的comments是前面的promise接收到的数据
+                console.log("获取到的评论");
                 console.log(comments);
                 document.write('<br><br><br><br><br>' + JSON.stringify(comments));
             }, (error) => {

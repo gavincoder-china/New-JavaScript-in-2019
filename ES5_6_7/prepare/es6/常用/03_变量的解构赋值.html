@@ -17,12 +17,18 @@
 -->
 <script type="text/javascript">
     let obj = {name : 'kobe', age : 39};
+    
+
+
 //    let name = obj.name;
 //    let age = obj.age;
 //    console.log(name, age);
-    //对象的解构赋值
-    let {age} = obj;
-    console.log(age);
+    //对象的解构赋值  名称要是对象中已有的
+
+    let {name,age} = obj;
+
+    console.log(name,age);  
+
 //    let {name, age} = {name : 'kobe', age : 39};
 //    console.log(name, age);
 
@@ -31,11 +37,13 @@
     let [a, b, c, d] = arr;
     console.log(a, b, c, d);
     //console.log(e);
+
+    
     function person(p) {//不用解构赋值
         console.log(p.name, p.age);
     }
     person(obj);
-
+  //解构,直接写成对象形式
     function person1({name, age}) {
      console.log(name, age);
     }
