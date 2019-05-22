@@ -13,15 +13,16 @@
 <script type="text/javascript">
     var obj = {
         name:'',
-        get name(){
-            return this.name;
-        },
         set name(data){
             this.name=name;
+        },
+        get name(){
+            return this.name;
         }
+        
     };
     //这边还需要去研究下js面向对象的封装
-    
+
     console.log(obj.fullName);
 
     obj.fullName = 'gavincoder';
