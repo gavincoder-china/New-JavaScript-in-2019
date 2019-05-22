@@ -12,19 +12,20 @@
 -->
 <script type="text/javascript">
     var obj = {
-        firstName : 'kobe',
-        lastName : 'bryant',
-        get fullName(){
-            return this.firstName + ' ' + this.lastName
+        name:'',
+        get name(){
+            return this.name;
         },
-        set fullName(data){
-            var names = data.split(' ');
-            this.firstName = names[0];
-            this.lastName = names[1];
+        set name(data){
+            this.name=name;
         }
     };
+    //这边还需要去研究下js面向对象的封装
+    
     console.log(obj.fullName);
-    obj.fullName = 'curry stephen';
+
+    obj.fullName = 'gavincoder';
+
     console.log(obj.fullName);
 
 </script>

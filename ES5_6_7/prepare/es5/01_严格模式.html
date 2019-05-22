@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>01_严格模式</title>
 </head>
+
 <body>
-<!--
+  <!--
 1. 理解:
   * 除了正常运行模式(混杂模式)，ES5添加了第二种运行模式："严格模式"（strict mode）。
   * 顾名思义，这种模式使得Javascript在更严格的语法条件下运行
@@ -23,18 +25,67 @@
 	* 对象不能有重名的属性
 -->
 
-<script type="text/javascript">
+  <script type="text/javascript">
     'use strict';
-    var age = 12;
+    //使用严格模式,写在第一行
+    var age = 12;  //变量必须声明 使用var /let/const
     console.log(age);
+
     function Person(name, age) {
-        this.name = name;
-        this.age = age;
+      this.name = name;
+      this.age = age;
     }
+
     new Person('kobe', 39);
+
+
     setTimeout(function () {
-        console.log(this);//window
+      console.log(this);//window
     }, 1000);
+
+    /*
+    一、全局作用域中的this
+       在严格模式下，在全局作用域中，this指向window对象
+    二、全局作用域中函数中的this
+       在严格模式下，这种函数中的this等于undefined
+    三、 对象的函数（方法）中的this
+       在严格模式下，对象的函数中的this指向调用函数的对象实例
+    四、构造函数的this
+       在严格模式下，构造函数中的this指向构造函数创建的对象实例。
+    五、事件处理函数中的this
+       在严格模式下，在事件处理函数中，this指向触发事件的目标对象。
+    
+          "use strict";
+          
+          function blue_it(e){
+          if(this === e.target){
+          this.style.backgroundColor = "#00f";
+          }
+          }
+          var elements = document.getElementsByTagName('*');
+          for(var i=0 ; i<elements.length ; i++){
+          elements[i].onclick = blue_it;
+          }
+          
+          //这段代码的作用是使被单击的元素背景色变为蓝色
+          
+    
+     六、内联事件处理函数中的this
+    
+          在严格模式下，在内联事件处理函数中，有以下两种情况：
+          
+          <button onclick="alert((function(){'use strict'; return this})());">
+          内联事件处理1
+          </button>
+          <!-- 警告窗口中的字符为undefined -->
+          
+          <button onclick="'use strict'; alert(this.tagName.toLowerCase());">
+          内联事件处理2
+          </button>
+          <!-- 警告窗口中的字符为button -->
+    */
+
+
 
     //* 创建eval作用域
     var name = 'kobe';
@@ -42,12 +93,13 @@
     console.log(name);
 
     var obj = {
-        name : 'kobe',
-        name : 'weide'
+      name: 'kobe',
+      name: 'weide'
     };
     console.log(obj);
 
-</script>
+  </script>
 
 </body>
+
 </html>

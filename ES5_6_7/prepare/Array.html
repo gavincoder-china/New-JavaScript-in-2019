@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, "abc", "edf", 1];
+
+
+    // 1. Array.prototype.indexOf(value) : 得到值在数组中的第一个下标
+
+    console.log(arr.indexOf(1));
+
+    // 2. Array.prototype.lastIndexOf(value) : 得到值在数组中的最后一个下标
+    console.log(arr.lastIndexOf(1));
+
+
+
+
+
+    // 3. Array.prototype.forEach(function(item, index){}) : 遍历数组
+
+
+    arr.forEach(function (item, index) {
+
+
+        console.log(item, index);
+
+    });
+
+
+
+
+
+
+
+
+
+    // 4. Array.prototype.map(function(item, index){}) : 遍历数组返回一个新的数组，返回加工之后的值
+
+    let arr2 = arr.map(function (item, index) {
+
+        return item + 10;
+
+
+    })
+    console.log(arr2);
+
+    // 5. Array.prototype.filter(function(item, index){}) : 遍历过滤出一个新的子数组， 返回条件为true的值
+
+    let arr3 = arr.filter(function (v, k) {
+
+        return v > 5;
+    })
+
+    console.log(arr3);
+    // console.log("abc"<5);  非数值间无法比较大小
+
+    // 1. Array.from(v) : 将伪数组对象或可遍历对象转换为真数组
+
+    let arr4 = Array.from("gavincoder");
+    console.log(arr4);
+
+
+    console.log(Array.from([1, 2, 3], (x) => x * x));
+
+    // expected output: Array [1, 4, 9]
+
+    // 2. Array.of(v1, v2, v3) : 将一系列值转换成数组
+
+    let arr5 = Array.of("aBC", 2561, [1, 2, 3, 4], { name: "gavin" }, function () {
+        console.log("hello js")
+    });
+    console.log(arr5);
+    arr5[4](); //证实了数组里可以传对象
+
+
+    // 3. find(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素
+
+    let result = arr.find(function (item, index) {
+        return item > 3
+    });
+    console.log(result);//4
+
+
+    // 4. findIndex(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素下标
+
+    let result2 = arr.findIndex(function (item, index) {
+        return item > 3
+    });
+    console.log(result2);//3
+
+
+
+
+    
+
+</script>
+
+</html>

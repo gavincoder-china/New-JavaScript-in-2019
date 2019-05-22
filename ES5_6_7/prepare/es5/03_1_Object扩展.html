@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>03_Object扩展</title>
+    <meta charset="UTF-8">
+    <title>03_Object扩展</title>
 </head>
+
 <body>
-<!--
+    <!--
 ES5给Object扩展了好一些静态方法, 常用的2个:
 1. Object.create(prototype, [descriptors])
   * 作用: 以指定对象为原型创建新的对象
@@ -21,47 +23,58 @@ ES5给Object扩展了好一些静态方法, 常用的2个:
   * set ：修改当前属性值得触发的回调函数，并且实参即为修改后的值
   * 存取器属性：setter,getter一个用来存值，一个用来取值
 -->
-<script type="text/javascript">
-    var obj = {name : 'curry', age : 29}
-    var obj1 = {};
-    obj1 = Object.create(obj, {
-        sex : {
-            value : '男',
-            writable : true,
-            enumerable:true
+    <script type="text/javascript">
+        //创建一个obj对象
+        var obj = { name: 'curry', age: 29 }
+        //创建一个obj1空对象
+        var obj1 = {};
+        //把obj作为obj1的原型,用来继承obj的方法与属性
+        obj1 = Object.create(obj,
+            //这边为obj1对象创建新的属性 ,,不能添加方法
+            {
+                sex: {
+                    value: '男',
+                    writable: true,  //可修改
+                    configurable: true, //可删除
+                    enumerable: true //可枚举
+                }
+                // ,不能添加新的方法函数
+                // test:function(){
+                //     console.log("我是新创建的方法");
+                // }
+            });
+        obj1.sex = '女';
+        console.log(obj1.sex);
+
+
+        //循环obj1内的属性,  enumrable 可枚举
+        for (const key in obj1) {
+            console.log(key)
         }
-    });
-    obj1.sex = '女';
-    console.log(obj1.sex);
-    //循环obj1内的属性
-    for (const key in obj1) {
-       console.log(key)
-    }
-    //Object.defineProperties(object, descriptors)
-    var obj2 = {
-        firstName : 'curry',
-        lastName : 'stephen'
-    };
-    Object.defineProperties(obj2, {
-        fullName : {
-            get : function () {
-                return this.firstName + '-' + this.lastName
-            },
-            set : function (data) {
-                var names = data.split('-');
-                this.firstName = names[0];
-                this.lastName = names[1];
+
+
+        //Object.defineProperties(object, descriptors)
+        var obj2 = {
+            name:''
+        };
+        Object.defineProperties(obj2, {
+            fullName: { //拓展一个fullname的属性
+               //set方法 ,设置属性值
+               set: function (data) {
+                    this.name=data
+                },
+                //get方法,获取属性值,这边就是面向对象的封装
+                get: function () {
+                    return this.name
+                }
+                
             }
-        }
-    });
-    console.log(obj2.fullName);
-    obj2.firstName = 'tim';
-    obj2.lastName = 'duncan';
-    console.log(obj2.fullName);
-    obj2.fullName = 'kobe-bryant';
-    console.log(obj2);
-    
-    console.log(obj2.fullName);
-</script>
+        });
+        //设置属性值
+        obj2.fullName="gavincoder";
+        //获取属性值
+        console.log(obj2.fullName);
+    </script>
 </body>
+
 </html>

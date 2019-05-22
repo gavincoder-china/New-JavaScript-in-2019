@@ -26,9 +26,9 @@
 
     //Object.assign(target, source1, source2..)
     let obj = {name : 'kobe', age : 39, c: {d: 2}};
-    let obj1 = {};
-    Object.assign(obj1, obj);
-    console.log(obj1, obj1.name);
+    let obj1 = {name:"gavin",nn:"coder"};
+    Object.assign(obj1, obj);  //这边是对象复制,单个属性不可操作
+    console.log(obj1, obj1.name,obj1.nn); //该复制不会覆盖原特有属性,但是会覆盖同名属性
 
     //直接操作 __proto__ 属性
     let obj3 = {name : 'anverson', age : 41};

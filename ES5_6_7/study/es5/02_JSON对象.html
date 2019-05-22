@@ -15,14 +15,18 @@
 
 -->
   <script type="text/javascript">
-    var gavin = {
+    //创建一个gavin对象
+   var gavin = {
       "name": "gavincoder",
       "age": "18"
     }
     
+    //把gavin对象转换成json对象
+
     var gg = JSON.stringify(gavin);
     console.log(gg);
 
+    //把json对象转换成js对象
     gg = JSON.parse(gg);
     console.log(gg);
   </script>
