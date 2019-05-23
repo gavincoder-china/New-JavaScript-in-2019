@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 异常处理多数用在后端,用于记录日志
+
+    //异常自定义抛出
+
+    let throwAbnormal = function (a, b) {
+
+        //这边写个除法运算,如果b为0的话,抛出异常
+        if (b == 0) {
+
+            throw "分子不能为0"
+        }
+        return a / b;
+
+
+    }
+    //异常捕获
+    try {
+        //把你认为可能出错的代码放在这
+        throwAbnormal(1,0);
+
+    } catch (error) {
+        //异常处理,记录日志,这边的error就是我们自定义抛出的异常
+        //如果未自定义,则由系统抛出
+        console.log(error)
+    }finally{
+  //这边是无论是否有异常都要执行的语句
+  console.log("这边是无论是否有异常都要执行的语句")
+        
+    }
+
+
+
+
+</script>
+
+
+</html>
