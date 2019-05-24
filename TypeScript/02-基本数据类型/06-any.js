@@ -4,7 +4,9 @@
  */
 /**ts语法*/
 /*any是任意类型相当于var*/
-var str = null;
+var str;
+// var test="gavin";
+// test=10;  系统自动分配类型
 str = 'adfsdf';
 str = 12;
 str = false;

@@ -1,6 +1,6 @@
 "use strict";
 /**封装一个Person类*/
-class Person {
+class Person04 {
     get name() {
         return this._name;
     }
@@ -19,9 +19,13 @@ class Person {
             this._age = age;
         }
     }
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
 }
-var person = new Person();
+var person04 = new Person04("gavin", 18);
 // person.name='jack';
-person.age = 230; //如果年龄是不正确的，会报错
+person04.age = 230; //如果年龄是不正确的，会报错
 // console.log(person.name);
 // console.log(person.age);

@@ -10,6 +10,9 @@ console.log(arr1);
 var arr2:number[]=[3,1,5,7];
 console.log(arr2);
 
+//数组的类型是多样化的
+var arr4:string[]=["a","b"];
+
 
 /*第二种方式:(指定数组的类型为number,泛型应用)*/
 var arr3:Array<number>=[10,3.4,45,5];

@@ -1,5 +1,6 @@
 
 var a: number = 1;
+
 // switch (a) {
 //     case '1':
 //         console.log(a);

@@ -13,6 +13,7 @@ function sum2(x, y, type) {
     else if (type == 1) {
         return x + '' + y; //返回string
     }
+    return 0;
 }
 var result2 = sum2(1, 4, 1);
 console.log(result2);

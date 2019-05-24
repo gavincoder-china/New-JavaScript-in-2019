@@ -1,6 +1,9 @@
 "use strict";
-/**
- * Created by liujun on 2018/2/26.
+/*
+ * @Author: gavincoder
+ * @Date: 2019-05-24 20:03:13
+ * @Last Modified by: gavincoder
+ * @Last Modified time: 2019-05-24 20:03:50
  */
 /**js语法:没有枚举这个概念，可以间接实现*/
 var College1 = {

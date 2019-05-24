@@ -1,12 +1,14 @@
 "use strict";
-/**
- * Created by liujun on 2018/2/26.
- */
 /**ts语法：void声明的变量只能为它赋予undefined和null*/
-var a = null;
-var b = undefined;
+//undefined
+//1:未被定义的
+//2:已被定义但是未赋值的
+//3:函数没有返回值的
+//null 空对象,用作占位
+//var tesskhsbakc: void = null;
+var bc = undefined;
 // var c:void='sdf';
-console.log(a, b);
+//console.log(a, b);
 /**js语法*/
 function show1() {
     return 'show1';
@@ -19,5 +21,6 @@ function show2() {
 console.log(show2());
 /**ts语法:声明函数的返回类型位void*/
 function show3() {
+    console.log("halou");
 }
-console.log(show3());
+show3();
