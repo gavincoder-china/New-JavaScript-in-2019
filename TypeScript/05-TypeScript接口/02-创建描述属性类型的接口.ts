@@ -7,12 +7,12 @@ interface Params{
 }
 
 /**2.定义一个访问网络的函数*/
-function ajar(url:string,params:Params,callback:(result:string,error:number)=>void) {
+function ajar00(url:string,params:Params,callback:(result:string,error:number)=>void) {
     console.log(url,params);
 }
 
 /**3.调用一下ajar函数*/
 var params:Params={username:'jack',password:'12345'}; //使用接口
-ajar('http://www.baidu.com',params,function (result:string,error:number) {
+ajar00('http://www.baidu.com',params,function (result:string,error:number) {
 
 });

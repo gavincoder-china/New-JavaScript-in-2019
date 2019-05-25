@@ -17,11 +17,17 @@ class Person04{
     }
     /**这里可以进行容错处理*/
     public set age(age:number){
-        if(age>200 || age<0){
-            throw '年龄输入有误';
-        }else{
-            this._age=age;
+      
+        try {
+            if(age>100 || age<0){
+                throw '年龄输入有误';
+            }else{
+                this._age=age;
+            }
+        } catch (error) {
+            console.log(error)
         }
+       
 
     }
 

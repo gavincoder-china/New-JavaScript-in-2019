@@ -9,4 +9,4 @@ var arr2:number [] =[3,4,5]; // 指定类型是number
 
 var arr3=new Array<number>();  // 新建一个数组，并指定其类型（泛型）
 
-var arr4:Array<number>=new Array<number>(); //新建一个number类型的数组
+var arr40:Array<number>=new Array<number>(); //新建一个number类型的数组

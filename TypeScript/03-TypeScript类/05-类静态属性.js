@@ -1,6 +1,15 @@
 "use strict";
+/*
+ * @Author: gavincoder
+ * @Date: 2019-05-25 17:07:18
+ * @Last Modified by: gavincoder
+ * @Last Modified time: 2019-05-25 17:44:07
+ */
 /**封装一个Person类*/
-class Person {
+class Person000 {
+    constructor(name) {
+        this._name = name;
+    }
     get name() {
         return this._name;
     }
@@ -9,8 +18,8 @@ class Person {
     }
 }
 /**定义了个一个共有的静态的属性。属于类级别的属性*/
-Person.eyeNumber = 2;
-var person = new Person();
-person.name = 'lose'; //访问了set方法
-console.log(person.name); //访问了get方法
-console.log(Person.eyeNumber);
+Person000.eyeNumber = 2;
+var person000 = new Person000("gavin");
+console.log(Person000.eyeNumber);
+//Person000.eyeNumber = "test"; //静态属性不能修改
+console.log(Person000.eyeNumber);

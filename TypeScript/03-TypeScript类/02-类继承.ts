@@ -1,43 +1,42 @@
-/**
- * Created by liujun on 2018/2/26.
- */
-/**2.ts语法*/
-/*1.定义一个Person2类*/
-class Person02{
-    /*2.添加属性,并声明属性的类型*/
-    name:string;
-    age:number;
-    /*3.类的构造器*/
-    constructor(name:string,age:number){
-        this.name=name;
-        this.age=age;
+class CarFather {
+    name: string;
+    price: number;
+    brand: string;
+    constructor(name: string, price: number, brand: string) {
+        this.name = name;
+        this.price = price;
+        this.brand = brand;
+
     }
-    /*4.定义方法*/
-    getName():void{
-        console.log(this.name);
+    run(): void {
+        console.log(`${this.name}会慢跑`);
+
     }
+
+
 }
+class CarSon extends CarFather {
 
+    color: string;
 
-/*2.定义Student类,并且继承Person2类*/
-class Student01 extends Person02{
-    /*2.添加属性,并声明属性的类型*/
-    job:string;
+    constructor(name: string, price: number, brand: string, color: string) {
 
-    /*3.类的构造器*/
-    constructor(name:string,age:number,job:string){
-        /*必须放在最前面,调用父亲的构造函数*/
-        super(name,age);
-        this.job=job;
+        super(name, price, brand);//必写
+
+        this.color = color;
     }
 
-    /*4.定义方法*/
-    getJob():void{
-        console.log(this.job);
+    drift(): void {
+        console.log(`${this.name}会漂移`);
     }
+    //overwrite 重写
+    run(): void {
+        console.log(`${this.name}会快跑`);
+    }
+
 }
+let hlydbc = new CarSon("gtr", 100, "奔驰", "yellow");
 
-/*5.新建一个Student对象*/
-var student=new Student01('lili',5,'play');
-console.log(student);
-student.getJob();
+hlydbc.run();
+
+hlydbc.drift();
