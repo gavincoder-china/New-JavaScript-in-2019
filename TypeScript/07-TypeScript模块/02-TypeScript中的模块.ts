@@ -1,4 +1,12 @@
+/*
+ * @Author: gavincoder 
+ * @Date: 2019-05-26 22:20:58 
+ * @Last Modified by:   gavincoder 
+ * @Last Modified time: 2019-05-26 22:20:58 
+ */
+
 /**1.使用ts定义一个BMap模块*/
+//namespace 命名空间
 namespace BMap{
 
     /**2.定义一个地图Map类*/

@@ -1,7 +1,4 @@
 "use strict";
-/**
- * Created by liujun on 2018/2/28.
- */
 /**1.定义一个数组*/
 var arr1 = [1, 2, 3]; // 默认的类型是number
 var arr2 = [3, 4, 5]; // 指定类型是number
