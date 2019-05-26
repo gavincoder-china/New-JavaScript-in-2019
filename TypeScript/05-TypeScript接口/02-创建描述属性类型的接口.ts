@@ -6,6 +6,9 @@ interface Params{
     id?:number, //这个是可选属性
 }
 
+// function ajar0(url:string,params:{username:string,password:string},callback:(result:string,error:number)=>void) {
+//     console.log(url,params);
+// }
 /**2.定义一个访问网络的函数*/
 function ajar00(url:string,params:Params,callback:(result:string,error:number)=>void) {
     console.log(url,params);

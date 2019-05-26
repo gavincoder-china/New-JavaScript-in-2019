@@ -1,6 +1,4 @@
-/**
- * Created by liujun on 2018/2/28.
- */
+
 
 /**1.定义指定类型的函数*/
 function show1(str:string){
@@ -24,6 +22,7 @@ console.log( show3<string>('lose') );
 var show4:(str:string)=>string=function (str:string):string {
     return str
 }
+
 var show5:<T> (t:T)=>T=function <T> (t:T):T {
     return t
 }

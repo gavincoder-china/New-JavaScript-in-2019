@@ -1,6 +1,4 @@
-/**
- * Created by liujun on 2018/2/28.
- */
+
 
 /**1.定义一个数组*/
 var arr1=[1,2,3];  // 默认的类型是number
