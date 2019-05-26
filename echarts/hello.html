@@ -1,0 +1,80 @@
+/*
+* @Author: gavincoder
+* @Date: 2019-05-26 09:02:41
+ * @Last Modified by: gavincoder
+ * @Last Modified time: 2019-05-26 09:19:35
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="echarts.js"></script>
+</head>
+<style>
+    #main {
+
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    #main2 {
+
+width: 500px;
+height: 500px;
+margin: 0 auto;
+margin-top: 100px;
+}
+</style>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main"></div>
+    <div id="main2"></div>
+    
+</body>
+<script type="text/javascript">
+    //初始化操作
+    //var chart = echarts.init(dom, 'light');  可以在此设置主题色,light或者dark
+    var dom_main = document.getElementById('main');
+    var dom_main2 = document.getElementById('main2');
+    
+    var mychart1 = echarts.init(dom_main, 'light');
+    var mychart2 = echarts.init(dom_main2, 'dark');
+
+
+    //上面的图表指定的样式及配置,可以被多个mychart同时调用
+    var option = {
+        title: {
+            text: 'ECharts 入门示例'
+        },
+        tooltip: {},
+        legend: {
+            data: ['销量']
+        },
+        xAxis: {
+            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+        }]
+    }
+
+    // 使用刚指定的配置项和数据显示图表。
+    //上面的图表指定的样式及配置,可以多个,可以重复使用option
+    mychart1.setOption(option);
+    mychart2.setOption(option);
+
+
+
+</script>
+
+</html>
