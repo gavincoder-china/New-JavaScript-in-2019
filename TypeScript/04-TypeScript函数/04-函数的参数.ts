@@ -1,3 +1,10 @@
+/*
+ * @Author: gavincoder 
+ * @Date: 2019-05-27 18:53:48 
+ * @Last Modified by:   gavincoder 
+ * @Last Modified time: 2019-05-27 18:53:48 
+ */
+
 
 function buildName1(firstName:string,lastName:string){
     return firstName+lastName;
@@ -17,6 +24,16 @@ function buildName2(firstName:string,lastName?:string){
 console.log(buildName2('li','si')); //正确
 console.log(buildName2('li')); //正确
 // console.log(buildName2('li','li','cai')); //不正确
+
+
+
+
+
+
+
+
+
+
 
 /**2.默认参数:lastName*/
 function buildName3(firstName:string,lastName='si'){

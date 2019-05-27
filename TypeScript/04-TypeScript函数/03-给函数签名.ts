@@ -1,3 +1,19 @@
+/*
+ * @Author: gavincoder 
+ * @Date: 2019-05-27 18:48:37 
+ * @Last Modified by: gavincoder
+ * @Last Modified time: 2019-05-27 18:53:10
+ */
+
+ //一般情况下,函数的声明方式有如下两种
+function kind1(){
+
+}
+
+var kind2=function(){
+
+}
+
 
 /**1.ts定义的拼接字符的匿名函数*/
 var joinStr1 = function (x: string, y: number): string {
@@ -6,6 +22,7 @@ var joinStr1 = function (x: string, y: number): string {
 
 /**2.给这个joinStr1匿名函数签名*/
 var joinStr: (name: string, age: number) => string 
+
 =
     function (x: string, y: number): string {
         return x + '=>' + y;
