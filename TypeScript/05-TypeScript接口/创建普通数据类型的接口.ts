@@ -2,9 +2,11 @@
  * @Author: gavincoder 
  * @Date: 2019-05-26 21:24:50 
  * @Last Modified by: gavincoder
- * @Last Modified time: 2019-05-26 22:06:16
+ * @Last Modified time: 2019-05-27 20:17:52
  */
-// 接口就是规范
+
+//接口就是规范   //非[api接口方法]
+
 //创建个方法,里面的参数包含 数值 数组 对象 方法
 
 function interfaceTest(name: string, mates: string[], account: { username: string, password: number }, speak: (slogan: string) => void) {

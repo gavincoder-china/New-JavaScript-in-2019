@@ -1,8 +1,8 @@
 /*
  * @Author: gavincoder 
  * @Date: 2019-05-27 18:53:48 
- * @Last Modified by:   gavincoder 
- * @Last Modified time: 2019-05-27 18:53:48 
+ * @Last Modified by: gavincoder
+ * @Last Modified time: 2019-05-27 20:16:57
  */
 
 
@@ -44,10 +44,14 @@ console.log(buildName3('li')); //正确
 console.log(buildName3('li','cai')); //正确
 // console.log(buildName3('li','si','cai')); //不正确
 
+
+
 /**3.剩余参数: ...restOfName: string[] */
+
 function buildName(firstName: string, ...restOfName: string[]) {
     return firstName + "-" + restOfName.join("-");
 }
+
 
 let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
 console.log(employeeName);
