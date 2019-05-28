@@ -1,6 +1,10 @@
-/**
- * Created by liujun on 2018/2/28.
+/*
+ * @Author: gavincoder 
+ * @Date: 2019-05-27 20:55:49 
+ * @Last Modified by:   gavincoder 
+ * @Last Modified time: 2019-05-27 20:55:49 
  */
+
 /**1.定义一个普通的GenericNumber1类*/
 class GenericNumber1{
 
@@ -15,8 +19,12 @@ class GenericNumber1{
     }
 
 }
+
+
 var genericNumber1=new GenericNumber1(1); //只能传递number类型
 genericNumber1.show(2); //只能传递number类型
+
+
 
 /**2.定义一个泛型的GenericNumber1类：通用性，可以适用于不同的类型*/
 class GenericNumber2<T>{

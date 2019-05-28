@@ -1,7 +1,5 @@
 "use strict";
-/**
- * Created by liujun on 2018/2/28.
- */
+
 /**1.定义一个普通的GenericNumber1类*/
 class GenericNumber1 {
     constructor(value) {

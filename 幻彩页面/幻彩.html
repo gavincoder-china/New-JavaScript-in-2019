@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    window.onload=()=>{
+        setInterval(()=>{
+            document.body.style.backgroundColor='#' + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0');  
+        },100)
+    };
+//random() 方法可返回介于 0 ~ 1 之间的一个随机数。
+//Math.floor(x)返回小于等于x的最大整数
+// *  运算符  会先把  0xfffff 转换成 数字    =》  1048575
+// Math.floor(Math.random() * 0xffffff)    =>  number =  15235201
+// number.toString(36) 转化成 36 进制 的 字符串  =》 str = '92jk1'
+// padEnd 和 padStart 都是 用来补全字符串的  的 操作 区别是 在后面补
+// 还是在前面补， 接受两个参数 ，  第一个参数 表示 补全 后 字符串的 长度 ，
+// 第二个是 你 要补的字符串  
+// str.padEnd(6, '0') 表示  在 str  后  补  0  ， 补后 str 的 长度为 6
+// = >  '92jk10'  
+// 就算  str.padEnd(6, '000')  结果还是  '92jk10'   因为长度固定了。
+
+</script>
+</html>

@@ -1,8 +1,8 @@
 /*
  * @Author: gavincoder 
  * @Date: 2019-05-26 22:20:46 
- * @Last Modified by:   gavincoder 
- * @Last Modified time: 2019-05-26 22:20:46 
+ * @Last Modified by: gavincoder
+ * @Last Modified time: 2019-05-27 20:53:30
  */
 
 
@@ -22,6 +22,7 @@ console.log( show2(false) );
 function show3<T>(str:T):T{
     return str;
 }
+
 console.log( show3<string>('lose') );
 
 /**4.定义泛型函数的类型：灵活性高,可以适用于不同的类型*/

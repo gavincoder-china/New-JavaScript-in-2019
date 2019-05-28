@@ -2,7 +2,7 @@
  * @Author: gavincoder 
  * @Date: 2019-05-26 21:24:50 
  * @Last Modified by: gavincoder
- * @Last Modified time: 2019-05-27 20:17:52
+ * @Last Modified time: 2019-05-27 20:34:05
  */
 
 //接口就是规范   //非[api接口方法]
@@ -46,7 +46,7 @@ interface Speak {
 }
 
 
-//调用接口后的函数方法
+//换用接口规范后的函数方法
 function interfaceTestArray(name: string, mates: Mates, account: Account, speak: Speak) {
     console.log(name);
     console.log(mates);

@@ -11,9 +11,7 @@ var vm = new Vue({
             timer:null,
             start:true,
             stop:false,
-            
-            
-           
+ 
         
         }
     },
