@@ -1,0 +1,112 @@
+.block {
+	position: absolute;
+	left: 0px;
+    top: 0px;
+    z-index: 101;
+}
+
+.sliderContainer {
+	position: relative;
+    text-align: center;
+    /* width: 310px; */
+    width: 268px;
+    height: 26.8px;
+    line-height: 26.8px;
+    margin-top: 4px;
+    background: #eee;
+    color: #a8a8a8;
+    border: 1px solid #ddd;
+}
+
+.sliderContainer_active .sliderMask {
+  height: 26.8px;
+  border-width: 1px;
+}
+
+.sliderContainer_success .slider {
+  height: 26.8px;
+  top: -1px;
+  border: 1px solid #52CCBA;
+  background-color: #52CCBA !important;
+}
+
+.sliderContainer_success .sliderMask {
+  height: 26.8px;
+  border: 1px solid #52CCBA;
+  background-color: #D2F4EF;
+}
+
+.sliderContainer_success .sliderIcon {
+  background-position: 0 0 !important;
+}
+
+.sliderContainer_fail .slider {
+  height: 26.8px;
+  top: -1px;
+  border: 1px solid #f57a7a;
+  background-color: #f57a7a !important;
+}
+
+.sliderContainer_fail .sliderMask {
+  height: 26.8px;
+  border: 1px solid #f57a7a;
+  background-color: #fce1e1;
+}
+
+.sliderContainer_fail .sliderIcon {
+  background-position: 0 -83px !important;
+}
+.sliderContainer_active .sliderText, .sliderContainer_success .sliderText, .sliderContainer_fail .sliderText {
+  display: none;
+}
+
+.sliderMask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 26.8px;
+  border: 0 solid #1991FA;
+  background: #D1E9FE;
+}
+
+.slider {
+	position: absolute;
+    left: 0;
+    width: 30px;
+	height: 26.8px;
+	top: -1px;
+	background: #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: background .2s linear;
+}
+
+.slider:hover {
+  background: #1991FA;
+}
+
+.slider:hover .sliderIcon {
+  background-position: 0 -13px;
+}
+
+.sliderIcon {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  width: 14px;
+  height: 10px;
+  background: url(../img/icon_light.f13cff3.png) 0 -26px;
+  background-size: 34px 471px;
+}
+
+.refreshIcon {
+	position: absolute;
+	right: 39px;
+    top: 0px;
+    z-index: 102;
+	width: 34px;
+	height: 34px;
+	cursor: pointer;
+	background: url(../img/icon_light.f13cff3.png) 0 -437px;
+	background-size: 34px 471px;
+}
