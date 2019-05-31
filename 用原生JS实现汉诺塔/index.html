@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汉诺塔游戏</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="game">
+        <div class="column" id="c1">
+        </div>
+        <div class="column" id="c2">
+        </div>
+        <div class="column" id="c3">
+        </div>
+        <div class="line"></div>
+        <div class="gameover">
+            <p>
+                游戏胜利！
+            </p>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="btns"><button data-from="c1" data-to="c3">左</button><button  data-from="c1" data-to="c2">右</button></div>
+        <div class="btns"><button data-from="c2" data-to="c1">左</button><button  data-from="c2" data-to="c3">右</button></div>
+        <div class="btns"><button data-from="c3" data-to="c2">左</button><button  data-from="c3" data-to="c1">右</button></div>
+    </div>
+    <script src="script/index.js"></script>
+</body>
+
+</html>

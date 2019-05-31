@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+.bg{
+    position: relative;
+    width:600px;
+    height:600px;
+    border:1px solid #ccc;  
+    margin:30px auto;
+    background:url('./img/bg.png') no-repeat;
+}
+.score{
+    position: relative;
+    width:150px;
+    height:40px;
+    margin:50px auto;
+    background:url('./img/score.png') no-repeat; 
+    background-size: 100% 100%;
+    color:#fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.square{
+    position: absolute;
+    width:30px;
+    height:30px;
+    background-position:center center;
+    background-repeat:no-repeat; 
+}
