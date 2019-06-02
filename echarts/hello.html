@@ -4,7 +4,7 @@
 * @Author: gavincoder
  * @Last Modified by: gavincoder
  * @Last Modified time: 2019-05-26 17:24:02
- * @Last Modified time: 2019-05-26 17:24:02
+ * @Last Modified time: 2019-06-02 09:30:34
 */
 
 <html lang="en">
@@ -36,7 +36,7 @@ margin-top: 100px;
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main"></div>
-    <div id="main2"></div>
+    <div id="main2" style="width:1000px"></div>
     
 </body>
 <script type="text/javascript">
@@ -46,7 +46,7 @@ margin-top: 100px;
     var dom_main2 = document.getElementById('main2');
     
     var mychart1 = echarts.init(dom_main, 'light');
-    var mychart2 = echarts.init(dom_main2, 'dark');
+    var mychart2 = echarts.init(dom_main2, 'light');
 
 
     //上面的图表指定的样式及配置,可以被多个mychart同时调用
@@ -69,10 +69,83 @@ margin-top: 100px;
         }]
     }
 
+   var option2 = {
+    title : {
+        text: '未来一周气温变化',
+        subtext: '纯属虚构'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['最高气温','最低气温']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            axisLabel : {
+                formatter: '{value} °C'
+            }
+        }
+    ],
+    series : [
+        {
+            name:'最高气温',
+            type:'line',
+            data:[11, 11, 15, 13, 12, 13, 10],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name:'最低气温',
+            type:'line',
+            data:[1, -2, 2, 5, 3, 2, 0],
+            markPoint : {
+                data : [
+                    {name : '周最低', value : -2, xAxis: 1, yAxis: -1.5}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        }
+    ]
+};
+        
+                
     // 使用刚指定的配置项和数据显示图表。
     //上面的图表指定的样式及配置,可以多个,可以重复使用option
     mychart1.setOption(option);
-    mychart2.setOption(option);
+    mychart2.setOption(option2);
 
 
 

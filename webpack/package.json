@@ -1,0 +1,20 @@
+{
+  "name": "gavin",
+  "version": "1.0.0",
+  "description": "gavin webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --entry ./src/js/main.js --output-filename ./dist/bundle.js",
+    "build":"webpack --watch"
+  },
+  "author": "gavin",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.2"
+  }
+}
