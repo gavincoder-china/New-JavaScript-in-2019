@@ -4,7 +4,7 @@ require('../css/main.css')
 
 
 
-console.log('hello webpack')
+console.log('hello webpack webstrom')
 
 
 
