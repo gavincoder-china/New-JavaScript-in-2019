@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <p>监听姓名变化</p>
+        <p>{{xing}}{{ming}}</p>
+        <label for="xing">姓:</label><input type="text" v-model="xing" id="xing"><br />
+        <label for="ming">名:</label><input type="text" v-model="ming" id="ming"><br />
+
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                xing: "gavin",
+                ming: "coder",
+
+            }
+        },
+        watch: {
+            //监听 xing 属性的变化,这边的函数名需要跟 data 内一致,并且哪个发生变化监听哪个,不要搞错目标
+            //value 就是当前 input 内的值
+            xing: function (value) {
+                this.xing = value;
+
+            },
+            //监听 ming 属性的变化
+            // ming: function (value) {
+            //     this.ming = value;
+            // }
+        }
+    })
+    // 全局监听
+    vm.$watch('ming', function (value) {
+
+        vm.ming = value;
+        // this.ming=value;
+        //vm 或者 this 都是可以的,this 使用时注意作用域
+    })
+
+</script>
+
+</html>

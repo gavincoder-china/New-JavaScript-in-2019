@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+1. 条件渲染指令
+  v-if
+  v-else
+  v-show
+2. 比较v-if与v-show
+  如果需要频繁切换 v-show 较好
+-->
+    <div id="app">
+        <p v-if="check">我爱你(if)</p>
+
+
+        <p v-else>我很爱你(else)</p>
+        <p v-show="check">我爱你(showTrue)</p>
+        <p v-show="!check">我很爱你(showFalse)</p>
+
+        <input type="button" @click="change" value="点击切换">
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                check: true
+            }
+        },
+        methods: {
+            change: function () {
+                this.check = !this.check;
+            }
+        },
+    })
+</script>
+
+</html>
