@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>17_插件</title>
 </head>
+
 <body>
 
-<div id="test">
-  <p v-my-directive="msg"></p>
-</div>
+  <div id="test">
+    <p v-my-directive="msg"></p>
+  </div>
 
-<script type="text/javascript" src="../js/vue.js"></script>
-<script type="text/javascript" src="vue-myPlugin.js"></script>
-<script type="text/javascript">
-  // 声明使用插件(安装插件: 调用插件的install())
-  Vue.use(MyPlugin) // 内部会调用插件对象的install()
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+  //这个是自己写的插件
+  <script type="text/javascript" src="vue-myPlugin.js"></script>
+  <script type="text/javascript">
+    // 声明使用插件(安装插件: 调用插件的install())
+    Vue.use(MyPlugin) // 内部会调用插件对象的install()
 
-  const vm = new Vue({
-    el: '#test',
-    data: {
-      msg: 'HaHa'
-    }
-  })
-  Vue.myGlobalMethod()
-  vm.$myMethod()
+    const vm = new Vue({
+      el: '#test',
+      data: {
+        msg: 'HaHa'
+      }
+    })
+    //插件的全局方法
+    Vue.myGlobalMethod()
+    //插件绑定在 prototype 上的方法
+    vm.$myMethod()
 
-  new Object()
-</script>
+    new Object()
+  </script>
 </body>
+
 </html>

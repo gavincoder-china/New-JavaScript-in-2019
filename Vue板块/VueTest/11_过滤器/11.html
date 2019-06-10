@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+1. 理解过滤器
+  功能: 对要显示的数据进行特定格式化后再显示
+  注意: 并没有改变原本的数据, 可是产生新的对应的数据
+2. 编码
+  1). 定义过滤器
+    Vue.filter(filterName, function(value[,arg1,arg2,...]){
+      // 进行一定的数据处理
+      return newValue
+    })
+  2). 使用过滤器
+    <div>{{myData | filterName}}</div>
+    <div>{{myData | filterName(arg)}}</div>
+-->
+<!--需求: 对当前时间进行指定格式显示-->
+    <div id="app">
+        <p>非格式化时间:{{time}}</p>
+
+        <p>格式化时间:{{time | dateFormat}}</p>
+        <p>单独时分秒:{{time |dateFormat('HH:mm:ss:SS')}}</p>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<!-- 这是常用的时间格式化 js 库 -->
+<script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
+<script>
+    Vue.filter("dateFormat", function (value, format = 'YYYY-MM-DD HH:mm:ss:SS') {
+        //moment 库的使用方法见官方文档
+        return moment(value).format(format);
+    });
+
+
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                time: new Date()
+            }
+        },
+        mounted() {
+            setInterval(() => {
+                this.time = new Date()
+            }, 10)
+        }
+    })
+
+</script>
+
+</html>

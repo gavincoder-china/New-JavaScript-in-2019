@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        //index 是下标,item是属性值 arr 是数据来源 :key="item"是优化
+        <li v-for="(item,index) in arr" :key="item">
+
+            {{index}}: {{item}}
+
+        </li>
+        <input type="button" @click="test" value="test">
+
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                arr: ["1", "2", "3", 4, 5, 6],
+                persons: [
+                    { name: 'Tom', age: 18 },
+                    { name: 'Jack', age: 17 },
+                    { name: 'Bob', age: 19 },
+                    { name: 'Mary', age: 16 }
+                ]
+            }
+        },
+        methods: {
+            test() {
+                let arr = [...this.persons];
+                arr.sort(function (p1, p2) {
+                   // 降序
+                   console.log("**************")
+                   console.log(p1,p2)
+                   console.log(p2.age - p1.age)
+                   console.log(arr)
+                        return p2.age - p1.age
+
+                })
+                console.log(arr)
+
+            }
+        },
+    })
+
+
+
+</script>
+
+</html>

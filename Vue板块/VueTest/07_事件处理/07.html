@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+1. 绑定监听:
+  v-on:xxx="fun"
+  @xxx="fun"
+  @xxx="fun(参数)"
+  默认事件形参: event
+  隐含属性对象: $event
+2. 事件修饰符:
+  .prevent : 阻止事件的默认行为 event.preventDefault()
+  .stop : 停止事件冒泡 event.stopPropagation()
+3. 按键修饰符
+  .keycode : 操作的是某个keycode值的健//查 ascill
+  .enter : 操作的是enter键
+-->
+
+<div id="app">
+
+        <h2>1. 绑定监听</h2>
+        <button @click="test1">test1</button>
+        <button @click="test2('abc')">test2</button>
+        <button @click="test3('abcd', $event)">test3</button>
+      
+        <h2>2. 事件修饰符</h2>
+        //防止点击事件
+        <a href="http://www.baidu.com" @click.prevent="test4">百度一下</a>
+        <div style="width: 200px;height: 200px;background: red" @click="test5">
+          <div style="width: 100px;height: 100px;background: blue" @click.stop="test6"></div>
+        </div>
+      
+        <h2>3. 按键修饰符</h2>
+        <input type="text" @keyup.13="test7">
+        <input type="text" @keyup.enter="test7">
+      
+      </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+
+
+const vm= new Vue({
+    el: '#app',
+    data: {
+
+    },
+    methods: {
+      test1(event) {
+        alert(event.target.innerHTML)
+      },
+      test2 (msg) {
+        alert(msg)
+      },
+      test3 (msg, event) {
+        alert(msg+'---'+event.target.textContent)
+      },
+
+      test4 () {
+        alert('点击了链接')
+      },
+
+      test5 () {
+        alert('out')
+      },
+      test6 () {
+        alert('inner')
+      },
+
+      test7 (event) {
+        console.log(event.keyCode)
+        alert(event.target.value)
+      }
+    }
+  })
+
+</script>
+
+</html>

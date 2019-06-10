@@ -16,5 +16,6 @@
       console.log('vm $myMethod()')
     }
   }
+  //暴露插件名称
   window.MyPlugin = MyPlugin
 })(window)

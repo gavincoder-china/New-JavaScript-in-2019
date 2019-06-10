@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>12_指令_内置指令</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
   <style>
-    [v-cloak] { display: none }
-  </style>
+      /* 这个样式配合 v-cloak来防止闪现命令 */
+      [v-cloak] { display: none }
+    </style>
 </head>
 <body>
-<!--
+  <!--
 常用内置指令
   v:text : 更新元素的 textContent
   v-html : 更新元素的 innerHTML
@@ -22,18 +25,19 @@
   ref : 为某个元素注册一个唯一标识, vue对象通过$refs属性访问这个元素对象
   v-cloak : 使用它防止闪现表达式, 与css配合: [v-cloak] { display: none }
 -->
-<div id="example">
-  <p v-cloak>{{content}}</p>
-  <p v-text="content"></p>   <!--p.textContent = content-->
-  <p v-html="content"></p>  <!--p.innerHTML = content-->
-  <p ref="msg">abcd</p>
-  <button @click="hint">提示</button>
-</div>
-
-<script type="text/javascript" src="../js/vue.js"></script>
-<script type="text/javascript">
-  new Vue({
-    el: '#example',
+<div id="app">
+    <p v-cloak>{{content}}</p>
+    <p v-text="content"></p>   <!--p.textContent = content-->
+    <p v-html="content"></p>  <!--p.innerHTML = content-->
+   <!-- //ref 是绑定了唯一的元素  可以调用其属性 textContent innerHTML 等 -->
+    <p ref="msg">abcd</p>
+    <button @click="hint">提示</button>
+  </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+const vm= new Vue({
+    el: '#app',
     data: {
       content: '<a href="http://www.baidu.com">百度一下</a>'
     },
@@ -43,6 +47,11 @@
       }
     }
   })
+
 </script>
-</body>
 </html>
+
+
+
+
+

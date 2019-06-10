@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 这两个是过程 */
+        .xxx-enter-active,
+        .xxx-leave-active {
+            transition: opacity 1s;
+        }
+
+        /* 这两个是初始时无样式与消失后无样式 */
+        .xxx-enter,
+        .xxx-leave-to {
+            opacity: 0;
+        }
+
+        /* 这两个是过程 */
+        .yyy-enter-active,
+        .yyy-leave-active {
+            /* transition 的第一个参数是指发生过渡效果的动画名称 第二个参数是时间 */
+            transition: all 1s;
+        }
+
+        /* 这两个是初始时无样式与消失后无样式 */
+        .yyy-enter,
+        .yyy-leave-to {
+            opacity: 0;
+            /* 变化方向 */
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+1. vue动画的理解
+  操作css的trasition或animation
+  vue会给目标元素添加/移除特定的class
+2. 基本过渡动画的编码
+  1). 在目标元素外包裹<transition name="xxx">
+  2). 定义class样式
+    1>. 指定过渡样式: transition
+    2>. 指定隐藏时的样式: opacity/其它
+3. 过渡的类名
+  xxx-enter-active: 指定显示的transition
+  xxx-leave-active: 指定隐藏的transition
+  xxx-enter: 指定隐藏时的样式
+-->
+    <div id="app">
+        <p>动画 1</p>
+        <button @click="check">toggle</button>
+        <!-- //这边的 name 名称随便写,跟样式保持一致 -->
+        <transition name="xxx">
+            <p v-show="show">transtion</p>
+        </transition>
+
+        <p>动画 2</p>
+        <button @click="check2">toggle</button>
+        <!-- //这边的 name 名称随便写,跟样式保持一致 -->
+        <transition name=yyy>
+            <p v-show="show2">transtion</p>
+        </transition>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                show: true,
+                show2:true
+            }
+        },
+        methods: {
+            check: function () {
+                this.show = !this.show;
+                
+            },
+            check2:function(){
+               this.show2=!this.show2 
+            }
+        },
+    })
+
+
+</script>
+
+</html>
