@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2ee2168-fa3b-461f-a51f-656e12d2f8a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Vue板块/VueTest/06_列表渲染/v-for.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue板块/VueTest/06_列表渲染/列表排序.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue板块/VueTest/07_事件处理/07.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vue板块/VueTest/08_表单输入绑定/08.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0328.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0408v-for.1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue板块/VueTest/06_列表渲染/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue板块/VueTest/06_列表渲染/test2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue板块/VueTest/07_事件处理/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vue板块/VueTest/08_表单输入绑定/test.html" beforeDir="false" />
-    </list>
+    <list default="true" id="c2ee2168-fa3b-461f-a51f-656e12d2f8a9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,47 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0330.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0407.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1117">
-              <caret selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0407计算和为37.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/09_Vue实例_生命周期/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +25,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="340" />
+    <option name="x" value="68" />
     <option name="y" value="22" />
     <option name="width" value="1861" />
     <option name="height" value="1000" />
@@ -87,50 +35,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="newjavascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newjavascript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newjavascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newjavascript" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue板块" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newjavascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newjavascript" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue板块" type="462c0819:PsiDirectoryNode" />
-              <item name="VueTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newjavascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newjavascript" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue板块" type="462c0819:PsiDirectoryNode" />
-              <item name="VueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="06_列表渲染" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newjavascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newjavascript" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue板块" type="462c0819:PsiDirectoryNode" />
-              <item name="VueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="08_表单输入绑定" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newjavascript" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newjavascript" type="462c0819:PsiDirectoryNode" />
-              <item name="Vue板块" type="462c0819:PsiDirectoryNode" />
-              <item name="VueTest" type="462c0819:PsiDirectoryNode" />
-              <item name="09_Vue实例_生命周期" type="462c0819:PsiDirectoryNode" />
+              <item name="New-JavaScript-in-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New-JavaScript-in-2019" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -138,12 +54,14 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -168,23 +86,19 @@
       <option name="presentableId" value="Default" />
       <updated>1560131985964</updated>
       <workItem from="1560131988648" duration="10206000" />
+      <workItem from="1560349842115" duration="69000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10206000" />
+    <option name="totallyTimeSpent" value="10275000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="340" y="22" width="1861" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="329" y="245" width="1861" height="1000" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15380435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Services" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.19909503" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -192,6 +106,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Services" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2963801" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -236,20 +154,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/02_模板语法/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/02_模板语法/test.html" />
     <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0408v-for.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -264,31 +178,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/01_HelloWorld/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0407数据双向绑定.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0328.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/01_HelloWorld/test.html" />
+    <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0407数据双向绑定.html" />
+    <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0328.html" />
+    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/06_列表渲染/列表排序.html" />
+    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/08_表单输入绑定/test.html" />
+    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/09_Vue实例_生命周期/test.html" />
     <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0330.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="141">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -297,36 +196,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0407.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1117">
+        <state>
           <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/06_列表渲染/列表排序.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-460">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/08_表单输入绑定/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue板块/VUE练习源码/vue/0407计算和为37.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue板块/VueTest/09_Vue实例_生命周期/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
