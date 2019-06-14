@@ -111,7 +111,7 @@ npm run serve
 │   ├── views        # 页面目录
 │   ├── App.vue      # 父组件
 │   ├── main.js      # 入口文件
-│   ├── router.js    # 路由配置文件
+│   ├── index.js    # 路由配置文件
 │   └── store.js     # vuex状态管理文件
 ├── .gitignore       # git忽略文件
 ├── .postcssrc.js    # postcss配置文件

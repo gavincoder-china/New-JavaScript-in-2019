@@ -1,5 +1,5 @@
 {
-  "name": "vue02",
+  "name": "vue_router",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "element-ui": "^2.9.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.8.0",
