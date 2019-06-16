@@ -14,7 +14,7 @@
   export default{
     components:{
       Search,
-      // 内部定义的关键词名称 不可以使用 所以赋值一个名字
+      // 内部定义的关键词名称 不可以使用 所以赋值一个名 字
       UsersMain:Main
 
     }
