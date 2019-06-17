@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+<style>
+        div {
+                display: flex;
+                flex-wrap: wrap;
+                height: 100px;
+                text-align: center;
+
+
+        }
+
+        a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                flex-grow: 1;
+                /* flex-basis: 20%; */
+                background: red;
+                color: white;
+        }
+
+        span {
+                /* 配合 a 标签的 flex 与align-items: center;实现垂直居中 */
+                flex-grow: 1;
+        }
+
+        /* 实现分辨率小于 600px 时将登录注册移到下方 */
+        @media(max-width:600px) {
+                a {
+                        flex-basis: 25%;
+                }
+        }
+</style>
+
+<body>
+        <div>
+
+                <a href=""><span>test</span></a>
+                <a href=""><span>test</span></a>
+                <a href=""><span>test</span></a>
+                <a href=""><span>test</span></a>
+                <a href=""><span>登录</span></a>
+                <a href=""><span>注册</span></a>
+
+
+
+        </div>
+
+
+
+</body>
+
+</html>
