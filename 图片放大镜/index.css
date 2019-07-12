@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+    background-color:#fcebb6;
+    display:flex;
+    justify-content:center;
+    align-items: center; 
+}
+.box{
+    position: relative;
+    width:400px;
+    height:300px;
+    background-image:url('./1.jpg');
+    background-size:100% 100%;
+}
+.box img {
+    width:100%;
+    height: 100%;
+}
+.move {
+    display:none;
+    position: absolute;
+    width:200px;
+    height:200px;
+    bordeR:5px solid #fff;
+    border-radius: 50%;
+    cursor: move;
+    background:url('./1.jpg') no-repeat;
+
+}
