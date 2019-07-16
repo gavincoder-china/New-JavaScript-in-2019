@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.demo{
+		  display: flex;
+		  flex-direction: column;
+		}
+		.demo div{
+		  flex: 1;
+		}
+		.body{
+		  display: flex;  
+		} 
+		.header,.footer,.left,.right{
+		  flex: 0 0 20%;
+		  height: 200px;
+		}
+		.header{
+			background: red;
+		}
+		.body{
+			background: green;
+		}
+		.footer{
+			background: blue;	
+		}
+	</style>
+</head>
+<body>
+<div class="demo">
+   <div class="header">头部</div>
+   <div class="body">
+      <div class="left">left</div>
+      <div class="center">center</div>
+      <div class="right">right</div>
+   </div>
+   <div class="footer">底部</div>
+</div>
+</body>
+</html>

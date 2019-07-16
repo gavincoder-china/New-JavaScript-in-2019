@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex Demo</title>
+	<style type="text/css">
+	ul{
+	  display: flex;
+	  list-style: none;
+	  margin: 0 auto;
+	  width: 80%;
+	  background: green;
+	}
+	li{
+	  flex: 1;
+	  text-align: center;
+	  line-height: 100px;
+
+	  background: #112344;
+	  color: #FFF;
+	}
+
+
+
+	.demo{
+		  display: flex; 
+		  justify-content: space-around;
+		  background: red;
+		  width: 80%;
+		  margin: 10px auto;	
+		}
+	.demo > div{
+	  flex: none;
+	}
+	.left{
+	  width: 200px;
+	  height: 200px;
+	  background: #d4cdcd;
+	}
+	.right{
+	  width: 380px;
+	  height: 200px;
+	}
+	.btn{
+		background: blue;
+		color: white;
+		width: 100px;
+		text-align: center;
+		margin: 20px;
+	}
+	</style>
+</head>
+<body>
+<ul>
+ <li>音乐</li>
+ <li>影视</li>
+ <li>旅游</li>
+ <li>音乐</li>
+ <li>影视</li>
+ <li>旅游</li>
+</ul>
+
+
+<div class="demo">
+   <div class="left"></div>
+   <div class="right">
+      <p>Iphone7 PLUS XXXXXXXXXX</p>
+      <span>总人数99</span>
+      <span>剩余人数33</span>
+      <div class="btn">立即参与</div>
+   </div>
+</div>
+<div class="demo">
+   <div class="left"></div>
+   <div class="right">
+      <p>Iphone7 PLUS XXXXXXXXXX</p>
+      <span>总人数99</span>
+      <span>剩余人数33</span>
+      <div class="btn">立即参与</div>
+   </div>
+</div>
+</body>
+</html>
