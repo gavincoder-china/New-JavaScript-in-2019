@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <ul v-for="item in user">
+
+
+            <li> {{item.name}} </li>
+            <li> {{item.age}} </li>
+
+        </ul>
+
+
+
+    </div>
+
+
+</body>
+<script>
+
+    var vm = new Vue({
+
+        el: '#app',
+        data: {
+  
+                user: ''
+            
+        },
+        created() {
+            $.ajax({
+                url: "https://easy-mock.com/mock/5d4bd203d952b924c13b812c/vue/demo01",    //请求的url地址
+                dataType: "json",   //返回格式为json
+                type: "GET",   //请求方式
+                success: function (req) {
+                    vm.user = req.data;
+                    console.log(req)
+                }
+            });
+
+        }
+    })
+</script>
+
+</html>

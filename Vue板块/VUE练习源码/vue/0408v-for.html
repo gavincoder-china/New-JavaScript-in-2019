@@ -40,6 +40,7 @@
             <li v-for="(person,index) in persons">
                 <!-- <span v-for="key in person">{{key}}:</span> -->
                 <!-- 这边的参数顺序非常重要 -->
+             
                 <span v-for="(value ,key,i) in person">第{{index+1}}位 {{key}}:{{value}} ({{i+1}}) </span>
             </li>
 
