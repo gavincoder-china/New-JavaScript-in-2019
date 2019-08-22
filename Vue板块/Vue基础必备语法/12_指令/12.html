@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-      /* 这个样式配合 v-cloak来防止闪现命令 */
+      /* 这个样式配合 v-cloak来防止闪现命令   这个是属性选择器,找有这个属性的标签*/
       [v-cloak] { display: none }
     </style>
 </head>
@@ -43,7 +43,8 @@ const vm= new Vue({
     },
     methods: {
       hint () {
-        alert(this.$refs.msg.innerHTML)
+        alert(this.$refs.msg.innerHTML);
+        console.log(this.$refs.msg.textContent);
       }
     }
   })

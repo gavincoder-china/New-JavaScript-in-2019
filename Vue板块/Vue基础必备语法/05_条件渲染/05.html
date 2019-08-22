@@ -23,7 +23,7 @@
 
         <p v-else>我很爱你(else)</p>
         <p v-show="check">我爱你(showTrue)</p>
-        <p v-show="!check">我很爱你(showFalse)</p>
+        <p v-show="true">我很爱你(直接写true)</p>
 
         <input type="button" @click="change" value="点击切换">
     </div>
@@ -34,7 +34,8 @@
         el: '#app',
         data() {
             return {
-                check: true
+                check: true,
+               
             }
         },
         methods: {
