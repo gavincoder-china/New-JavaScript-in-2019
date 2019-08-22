@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VUE</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+	  <script type="text/javascript" src='js/vue.js'></script>
+    <script type="text/javascript" src='js/axios.js'></script>
+    <script type="text/javascript" src='js/index.js'></script>
+</head> 
+<body>
+    <div id="my" >
+      <div class="panel panel-info" style="margin:20px;">
+         <!-- 头部 -->
+        <div class="panel-heading">
+            <h1 style="display: inline-block;">我的购物清单列表</h1>
+            <span>清单总数
+              <span class="label label-warning" >{{lists.length}}</span>
+            </span>
+        </div>
+        <!-- 内容 -->
+        <div class="panel-body">
+            <div class="input-group">
+              <input class="form-control" type="text" v-model="name"/> 
+              <span class="input-group-btn">
+                <button class="btn btn-primary" @click="add()">添加</button>
+              </span>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>清单名称</th>
+                  <th>状态</th>
+                  <th>删除</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(list,index) in lists">
+                  <td>{{list.name}}</td>
+                  <td>{{list.state | stateFilter}}</td>
+                  <td>
+                    <button type="button" class="btn btn-danger btn-sm" @click="del(index)">
+                      删除
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+           
+    </div>
+</body>
+</html>

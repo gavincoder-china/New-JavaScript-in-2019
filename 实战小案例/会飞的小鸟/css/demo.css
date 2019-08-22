@@ -1,0 +1,19 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    overflow: hidden;
+}
+#bird {
+    position: absolute;
+}
+.direction-37 {
+    transform: rotateY(180deg);
+}
+.direction-38 {
+    transform: rotate(-60deg);
+}
+.direction-40 {
+    transform: rotate(60deg);
+}

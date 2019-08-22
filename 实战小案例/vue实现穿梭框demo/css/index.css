@@ -1,0 +1,42 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+body,html{
+    width:100%;
+    height:100%;
+}
+.panel-height {
+    height: 310px;
+    overflow-y: scroll;
+}
+.panel-height li {
+    cursor:default;
+    padding: 6px 0;
+}
+.panel-height li:hover {
+    color:#f60;
+}
+.panel-title span {
+    float:right;
+}
+.transfer {
+    display: table;
+    height: 350px;
+}
+.transfer-table {
+    display: table-cell;
+    vertical-align: middle;
+}
+.transfer-cell {
+    display:block;
+    text-align: center;
+    color: #409eff;
+    cursor:pointer;
+}

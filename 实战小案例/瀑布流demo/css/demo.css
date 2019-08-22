@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#main{
+    position: relative;
+}
+
+.box{
+    padding:10px;
+    float: left;
+
+}
+.box img{
+    width: 200px;
+    border:1px solid #dddddd;
+}

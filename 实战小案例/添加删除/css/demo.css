@@ -1,0 +1,21 @@
+.rows .list {
+	padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+.rows {
+	background: #FFDEE0;
+	width:220px;
+	border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color:#990020;
+}
+.rows .list>a {
+	display:none;
+	margin: 0px 20px;
+    color: rgb(255, 102, 0);
+    padding: 5px;
+    cursor: pointer;
+}

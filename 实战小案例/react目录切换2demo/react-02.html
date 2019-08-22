@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TAB</title>
+    <meta charset="UTF-8" />
+    <script src="js/react.development.js"></script>
+    <script src="js/react-dom.development.js"></script>
+    <script type="text/javascript" src="js/babel.min.js"></script>
+    <style>
+    .selected {
+      color:#f60;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+
+    <script type="text/babel">
+    class OneList extends React.Component{
+      render(){
+        return (
+          <div>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+            <p>111111</p>
+          </div>
+        )
+      }
+    }
+
+    class TabList extends React.Component{
+      constructor(){
+        super();
+        this.state = {
+          flag: true
+        }
+      }
+      tabChange(type){
+        if(type=='1'){
+          this.setState({
+            flag:true
+          })
+        }else {
+          this.setState({
+            flag:false
+          })
+        }
+        
+      }
+      render() {
+        const flag = this.state.flag;
+        return (
+          <div>
+            <ul>
+               <li className={flag ?'selected':''} onClick={()=>this.tabChange('1')}>标题一</li>
+               <li className={!flag ?'selected':''} onClick={()=>this.tabChange('2')}>标题二</li>
+            </ul>
+            <div>
+              {flag ? <OneList/> : <p>222222</p>}
+            </div>
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(
+      <TabList></TabList>,
+      document.getElementById("example")
+    );
+    </script>
+  </body>
+</html>

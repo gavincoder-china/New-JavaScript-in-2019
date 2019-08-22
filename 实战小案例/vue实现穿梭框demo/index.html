@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>穿梭框</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src='js/vue.js'></script>
+	<script src='js/index.js'></script>
+</head>
+<body>
+	<div id='my'>
+		<div class="container">
+			<div class="row">
+				<!--左侧-->
+				<div class="col-xs-5 col-sm-5" >
+					<div class="panel panel-success">
+						<!--标题-->
+						<div class="panel-heading">
+							<h3 class="panel-title">列表1<span>{{itemsL.length}}</span></h3>
+						</div>
+						<!--内容-->
+						<div class="panel-body panel-height">
+							<ul>
+								<li v-for="v in itemsL">
+									<input type="checkbox" v-model="v.check">
+									{{v.name}}
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--中间-->
+				<div class="col-xs-2 col-sm-2 transfer">
+					<div class="transfer-table">
+						<a class="transfer-cell" @click="addR()">>></a>
+						<a class="transfer-cell" @click="addL()"><<</a>
+					</div>
+
+				</div>
+				<!--右侧-->
+				<div class="col-xs-5 col-sm-5" >
+					<div class="panel panel-success">
+						<!--标题-->
+						<div class="panel-heading">
+							<h3 class="panel-title">列表2 <span>{{itemsR.length}}</span></h3>
+						</div>
+						<!--内容-->
+						<div class="panel-body panel-height">
+							<ul >
+								<li v-for="v in itemsR">
+									<input type="checkbox" v-model="v.check">
+									{{v.name}}
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>  
+			</div>
+		</div>
+   </div>
+</body>
+</html>

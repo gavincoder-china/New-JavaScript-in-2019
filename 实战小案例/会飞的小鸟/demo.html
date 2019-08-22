@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #bird {
+            position: absolute;
+        }
+
+        .direction-37 {
+            transform: rotateY(180deg);
+        }
+
+        .direction-38 {
+            transform: rotate(-60deg);
+        }
+
+        .direction-40 {
+            transform: rotate(60deg);
+        }
+    </style>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            var $bird = $("#bird");
+            var pos = $bird.offset();
+            var birdSize = { width: $bird.width(), height: $bird.height() };//小鸟图片的尺寸
+            var speed = 10;
+            var keyrecord = 39;
+            $(document).keydown(function (event) {
+                var key = event.keyCode;
+                if (keyrecord != key) {
+                    $bird.removeClass().addClass('direction-' + key)
+                }
+                keyrecord = key;
+                switch (key) {
+                    case 37://左
+                        pos.left -= speed;
+                        if (pos.left <= -birdSize.width) {
+                            pos.left = $(window).width();
+                        }
+                        break;
+                    case 38://上
+                        pos.top -= speed;
+                        if (pos.top <= -birdSize.height) {
+                            pos.top = $(window).height();
+                        }
+                        break;
+                    case 39://右
+                        pos.left += speed;
+                        if (pos.left >= $(window).width()) {
+                            pos.left = -birdSize.width;
+                        }
+                        break;
+                    case 40://下
+                        pos.top += speed;
+                        if (pos.top >= $(window).height()) {
+                            pos.top = -birdSize.height;
+                        }
+                        break;
+                }
+                $bird.offset(pos);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="bird"><img src="image/bird.gif" /></div>
+</body>
+
+</html>

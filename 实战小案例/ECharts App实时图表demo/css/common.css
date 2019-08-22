@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type:none;
+}
+body {
+    font-size: 14px;
+    background: #fff;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+html,body {
+    max-width:720px;
+    height:100%;
+    margin:0 auto;
+}
+
+/*登录主体*/
+.page-contaniner {
+    width:100%;
+    height:100%;
+    background: #6e80b2;
+    color: #fff;
+    margin: 0 auto;
+    position:relative;
+    overflow: auto;
+}
+/*登录内容*/
+.login-content .pic {
+    margin:10px;
+}
+.login-content .pic img {
+    max-width: 40%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.login-content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10%;
+}
+.login-content .table {
+    border-bottom: 1px solid #fff;
+    padding: 20px 0;
+}
+.login-content .table h3 {
+    margin: 5%;
+} 
+.login-content .table table {
+    width: 100%;
+}
+

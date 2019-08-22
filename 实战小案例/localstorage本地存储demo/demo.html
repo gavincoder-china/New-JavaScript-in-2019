@@ -1,0 +1,48 @@
+<!DOCTYPE>
+ <html lang="zh-en">
+ <head>
+     <title>js实现简单留言板</title>
+     <meta http-equiv="content-type" content="text/html;charset=utf-8">
+     <link href="css/bootstrap.min.css" rel="stylesheet"/>
+     <link href="css/demo.css" rel="stylesheet"/>
+     <script src="js/jquery-1.11.0.min.js"></script>
+     <script type="text/javascript" src="js/index.js"></script>
+
+ </head> 
+ <body>
+     <div class="container">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-1 control-label">昵称：</label>
+                <div class="col-sm-11">
+                    <input type="email" class="form-control name"  placeholder="请输入昵称">
+                </div> 
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">留言：</label>
+                <div class="col-sm-11">
+                    <textarea class="form-control message" rows="5" placeholder="请输入内容"></textarea>
+                </div>
+            </div>
+            <div class="form-group  btn-box">
+                <div class="col-sm-offset-1 col-sm-11">
+                    <button type="submit" class="btn btn-success submit" >提交留言</button>
+                    <button class="btn btn-primary viewMes">查看留言</button>
+                    <button class="btn btn-danger deleteAll">删除留言</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">留言列表</div>
+                <div class="panel-body">
+                    <ul class="list-group messageList">
+               
+                         
+                    </ul>
+                </div>
+        </div>
+    </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>vue城市三级联动</title>
+  <script src='js/vue.js'></script>
+  <script  src="js/demo.js"></script>
+</head>
+<body>
+  <div id="my">
+	<select v-model="prov" @change="updateCity();updateDistrict();">
+		<option v-for="v in arr">{{v.name}}</option>
+	</select>
+
+	<select v-model="city"  @change="updateDistrict()">
+		<option v-for="v in cityArr">{{v.name}}</option>
+	</select>
+
+	<select v-model="district" v-if="district">
+		<option v-for="v in districArr">{{v.name}}</option>
+	</select>
+  </div>
+</body>
+</html>

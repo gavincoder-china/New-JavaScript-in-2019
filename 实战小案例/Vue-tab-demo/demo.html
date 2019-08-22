@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script type="text/javascript" src='js/vue.js'></script>
+	<script type="text/javascript" src='js/axios.js'></script>
+	<script type="text/javascript" src='js/tab.js'></script>
+</head>
+<body>
+	<div id="my">
+		<!--默认写法-->
+		<ul class="tab-tit">
+			<li v-bind:class="cur==0 ? 'active' :''" v-on:click="action(0)">标题一</li>   
+			<li :class="cur==1 ? 'active' :''" @click="cur=1">标题二</li>
+			<li :class="cur==2 ? 'active' :''" @click="action(2)">标题三</li>
+			<li :class="{'active':cur==3}" @click="action(3)">标题四</li>
+		</ul>
+		<div class="tab-con">
+			<div v-if="cur==0">
+				内容一
+			</div>
+			<div v-if="cur==1">
+				内容二
+			</div>
+			<div v-if="cur==2">
+				内容三
+			</div>
+			<div v-if="cur==3">
+				内容四
+			</div>
+		</div>
+
+		<!--数组写法-->
+		<ul class="tab-tit">
+			<li v-for="(v,i) in title" :class="{'active':cur2==i}" @click="cur2=i">
+				{{v}}
+			</li>   
+		</ul>
+		<div class="tab-con">
+			<div v-for="(v,i) in content" v-if="cur2==i">
+				{{v}}
+			</div>
+		</div>
+
+		<!--数组对象写法-->
+		<ul class="tab-tit">
+			<li v-for="(v,i) in lists" :class="{'active':cur2==i}" @click="cur2=i">
+				{{v.title}}
+			</li>   
+		</ul>
+		<div class="tab-con">
+			<div v-for="(v,i) in lists" v-if="cur2==i">
+				{{v.content}}
+			</div>
+		</div>
+
+		<!--动态数据写法-->
+		<ul class="tab-tit">
+			<li v-for="(v,i) in tabLists" :class="{'active':cur2==i}" @click="cur2=i">
+				{{v.title}}
+			</li>   
+		</ul>
+		<div class="tab-con">
+			<div v-for="(v,i) in tabLists" v-if="cur2==i">
+				<ul>
+					<li v-for="tab in v.content">{{tab.title}}</li>
+				</ul>
+			</div>
+		</div>
+    </div>
+	
+</body>
+</html>

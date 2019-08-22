@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>全选</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src='js/vue.js'></script>
+	<script src='js/index.js'></script>
+</head>
+<body>
+	<div id='my'>
+		<input type="checkbox" v-model="checkAll.check" @change="checkAllChange()">
+		<label>{{checkAll.name}}</label>
+		<ul>
+			<li v-for="list in lists">
+				<input type="checkbox" v-model="list.check" @change="curCheck()">
+				<label>{{list.name}}</label>
+			</li>
+		</ul>
+   </div>
+	
+</body>
+</html>

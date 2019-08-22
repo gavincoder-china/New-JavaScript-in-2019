@@ -1,0 +1,33 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+body,html{
+    width:100%;
+    height:100%;
+}
+.panel-height {
+    height: 310px;
+    overflow-y: scroll;
+}
+.panel-height li {
+    cursor:default;
+    padding: 6px 0;
+}
+.panel-height li:hover {
+    color:#f60;
+}
+.panel-height li span.del{
+    float:right;
+    color:#999;
+} 
+.panel-height li span.photo{
+    padding-right:10px;
+    color:#3c763d;
+}
