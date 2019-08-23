@@ -1,6 +1,8 @@
+
 <template>
     <div>
-        <span>test</span><br/>
+        <span>这个是非slot</span><br/>
+        
         <slot name="slotTest">
 
 <!--          这个地方就是占位的,不需要写标签-->
@@ -9,9 +11,10 @@
         <slot name="slotTest2">
             slot 2 默认显示<br/>
         </slot>
-        test 5<br/>
+        这个是非slot<br/>
     </div>
 </template>
+
 
 <script>
     export default {

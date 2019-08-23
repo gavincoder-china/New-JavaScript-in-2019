@@ -19,6 +19,7 @@
 
       }
     },
+    
     mounted() {
       const url = `https://api.github.com/users/xunyegege`;
       axios.get(url).then(response => {

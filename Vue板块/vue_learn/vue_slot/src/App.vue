@@ -4,10 +4,11 @@
     <HelloWorld >
       <div slot="slotTest">
 
-         <span>slot test 1</span><br />
-         <span>slot test 2</span><br />
-         slot test 3<br />
+         <span>这个是调用占位符1</span><br />
+      
+        
       </div>
+      <div slot="slotTest2"></div>
 <!--      <div slot="slotTest2"></div>-->
 
 
