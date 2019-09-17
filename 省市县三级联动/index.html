@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery省市区县多级联动下拉框 带下拉项搜索DEMO演示</title>
+
+<link rel="stylesheet" type="text/css" href="css/city-picker.css">
+
+</head>
+<body>
+
+
+
+<h2>模拟城市-联动/搜索</h2>
+<div class="city-picker-selector" id="city-picker-search">
+	<div >
+		<input type="hidden" name="userProvinceId" class="input-price val-error" value="" data-required="userProvinceId">
+		<div class="selector-list listing ">
+			<div class="selector-search">
+				<input type="text" class="input-search" value="" placeholder="拼音、中文搜索">
+			</div>
+		    <ul></ul>
+		</div>
+	</div>
+	<div >
+		<input type="hidden" name="userCityId" class="input-price val-error" value="" data-required="userCityId">
+		<div class="selector-list listing hide">
+			<div class="selector-search">
+				<input type="text" class="input-search" value="" placeholder="拼音、中文搜索">
+			</div>
+			<ul></ul>
+		</div>
+	</div>
+	<div >
+		<input type="hidden" name="userDistrictId" class="input-price val-error" value="" data-required="userDistrictId">
+		<div class="selector-list listing hide">
+			<div class="selector-search">
+				<input type="text" class="input-search" value="" placeholder="拼音、中文搜索">
+			</div>
+			<ul></ul>
+		</div>
+	</div>
+</div>
+<!-- end .city-picker-selector -->
+
+<!-- end .city-picker-select -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/citydata.js"></script>
+<script type="text/javascript" src="js/cityPicker-1.0.0.js?v=1"></script>
+<script type="text/javascript">
+	$(function () {
+
+		//模拟城市-联动/搜索
+		$('#city-picker-search').cityPicker({
+			dataJson: cityData,
+			renderMode: true,
+			search: true,
+			linkage: true
+		});
+
+	
+	});
+</script>
+
+</body>
+</html>
